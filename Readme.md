@@ -22,7 +22,21 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
 <details>
   <summary> Section 1: Introduction </summary>
 
-  1. Course Outline   
+  1. Course Outline 
+  2. Join Our Online Classroom!  
+  3. [Exercise: Meet Your Classmates and Instructor](contents/3.%20Exercise_Meet-Your-Classmates-and-Instructor.md)
+  4. Node.js - How We Got Here
+  5. Node.js Runtime
+  6. How To Succeed In The Course
+  7. Latest Version Of Node.js
+  8. [Course Projects + Code + Resources](contents/8_Course-Projects-Code-Resources.md)
+  9. ZTM Resources
+</details>
+
+<details>
+  <summary> Section 2: Node.js Fundamentals: Foundations and Environment Setup </summary>
+
+  10. OPTIONAL: Installing Node.js   
 </details>
 
 
