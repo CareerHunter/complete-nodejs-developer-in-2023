@@ -30,13 +30,29 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   6. How To Succeed In The Course
   7. Latest Version Of Node.js
   8. [Course Projects + Code + Resources](contents/8_Course-Projects-Code-Resources.md)
-  9. ZTM Resources
+  9. [ZTM Resources](contents/9_ZTM-Resources.md)
 </details>
 
 <details>
   <summary> Section 2: Node.js Fundamentals: Foundations and Environment Setup </summary>
 
-  10. OPTIONAL: Installing Node.js   
+  10. OPTIONAL: Installing Node.js 
+  11. OPTIONAL: Windows Installation Tips  
+  12. The Node.js Release Cycle
+  13. The Node.js REPL
+  14. [Web Developer Monthly](contents/14_Web-Developer-Monthly.md)
+  15. Setting Up Our Developer Environment
+  16. [Our First Node.js App](contents/16_Our-First-Node.js-App.md)
+  17. [Node.js VS JavaScript](contents/17_Node.js-VS-JavaScript.md)
+  18. The global Object
+  19. Introduction to Backend VS Frontend
+  20. [Monthly Coding Challenges, Free Resources and Guides](contents/20_Monthly-Coding-Challenges-Free-Resources-and-Guides.md)
+</details>
+
+<details>
+  <summary> Section 3: Node.js Fundamentals: Internals </summary>
+
+  21. What Node.js Includes   
 </details>
 
 
