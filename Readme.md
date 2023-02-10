@@ -78,6 +78,33 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
 </details>
 
 
+
+
+<details>
+  <summary> Section 21: Appendix: How Javascript Works </summary>
+
+  351. [Quick Note: Upcoming Videos](contents/351_Quick-Note_Upcoming-Videos.md)  
+  352. [JavaScript Engine](contents/352_JavaScript-Engine.md) 
+  353. Exercise: Javascript Engine
+  354. Inside the Engine
+  355. Exercise: JS Engine For All
+  356. Interpreters and Compilers
+  357. Inside the V8 Engine
+  358. Comparing Other Languages
+  359. [Writing Optimized Code](contents/359_Writing-Optimized-Code.md)
+  360. WebAssembly
+  361. Call Stack and Memory Heap
+  362. Stack Overflow
+  363. Garbage Collection
+  364. [Memory Leaks](contents/364_Memory-Leaks.md)
+  365. Single Threaded
+  366. Exercise: Issue With Single
+  367. [Javascript Runtime](contents/367_Javascript-Runtime.md)
+  368. [Node.js](contents/368_Node.js.md)
+  369. [Recommended Path: Back To Node](contents/369_Recommended-Path_Back-To-Node.md)
+</details>
+
+
 ##  Requirements
 - Just basic JavaScript knowledge
 - You DO NOT need any prior experience with NodeJS!
