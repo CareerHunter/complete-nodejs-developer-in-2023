@@ -104,6 +104,21 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   369. [Recommended Path: Back To Node](contents/369_Recommended-Path_Back-To-Node.md)
 </details>
 
+<details>
+  <summary> Section 22: Appendix: Asynchronous JavaScript </summary>
+
+  370. [Quick Note: Upcoming Videos](contents/370_Quick-Note_Upcoming-Videos.md)  
+  371. [Section Overview](contents/371_Section-Overview.md)
+  372. [Promises](contents/372-Promises.md)
+  373. [ES8 - Async Await](contents/373_ES8-Async-Await.md)
+  374. [ES9 (ES2018)](contents/374_ES9-(ES2018).md)
+  375. [ES9 (ES2018) - Async](contents/375_ES9-(ES2018)-Async.md)
+  376. [Job Queue](contents/376_Job-Queue.md)
+  377. [Parallel, Sequence and Race](contents/377_Parallel-Sequence-and-Race.md)
+  378. [ES2020: allSettled()](contents/378_ES2020_allSettled().md)
+  379. [Threads, Concurrency and Parallelism](contents/379_Threads-Concurrency-and-Parallelism.md)
+  380. [Recommended Path: Back To Node](contents/380_Recommended-Path_Back-To-Node.md)
+</details>
 
 ##  Requirements
 - Just basic JavaScript knowledge
