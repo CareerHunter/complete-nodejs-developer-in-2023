@@ -74,7 +74,16 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
 <details>
   <summary> Section 4: Node.js Fundamentals: Module System </summary>
 
-  38. The require Function   
+  38. [The require Function](contents/38_The-require-Function.md) 
+  39. [Making HTTP Requests](contents/39_Making-HTTP-Requests.md)  
+  40. [Why Use Modules?](contents/40_Why-Use-Modules%3F.md)
+  41. [Creating Our Own Modules](contents/41_Creating-Our-Own-Modules.md)
+  42. [Exporting From Modules](contents/42_Exporting-From-Modules.md)
+  43. [CommonJS vs ECMAScript](contents/43_CommonJS-vs-ECMAScript.md)
+  44. [Creating Our Own ECMAScript Modules](contents/44_Creating-Our-Own-ECMAScript-Modules.md)
+  45. [Module Caching](contents/45_Module-Caching.md)
+  46. [Using index.js](contents/46_Using-index.js.md)  
+  47. [Should We Use index.js?](contents/47_Should-We-Use-index.js%3F.md)
 </details>
 
 
