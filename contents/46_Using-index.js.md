@@ -40,7 +40,7 @@ module.exports = {
 */
 ```
 
-- `./internals/request.mjs`
+- `./internals/request.js`
 ```
 exports.REQUEST_TIMEOUT = 500;
 
@@ -56,7 +56,7 @@ exports.send = function send(url, data){
 
 ---
 
-- `./internals/response.mjs`
+- `./internals/response.js`
 ```
 function decrpt(data) {
     return 'decrypted data'
@@ -69,7 +69,7 @@ exports.read = function read() {
 
 ---
 
--   run `node http.mjs`
+-   run `node http.js`
 ```
 sending encrypted data to https://google.com
 decrypted data
