@@ -101,6 +101,20 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   57. [LinkedIn Endorsements](contents/57_LinkedIn-Endorsements.md)
 </details>
 
+<details>
+  <summary> Section 6: Node.js File I/O - Planets Project </summary>
+
+  [Section 6: Node.js File I/O - Planets Project](contents/Section-6_Node.js-File-IO-Planets-Project.md)
+  -   [58 Code For This Section](contents/58_Code-For-This-Section.md)  
+  -   [59 Exploring Planets With Node](contents/59_Exploring-Planets-With-Node.md) 
+  -   [60 Importing Kepler Space Telescope Data](contents/60_Importing-Kepler-Space-Telescope-Data.md)
+  -   [61 Setting Up Our CSV Parser](contents/61_Setting-Up-Our-CSV-Parser.md)
+  -   [62 Latest Version of CSV Parser](contents/62_Latest-Version-of-CSV-Parser.md)
+  -   [63 Streaming Large Data Files](contents/63_Streaming-Large-Data-Files.md)
+  -   [64. Reading Our Planets Data](./contents/64_Reading-Our-Planets-Data.md)
+  -   [65 ]()
+</details>
+
 
 
 
