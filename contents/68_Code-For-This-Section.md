@@ -6,21 +6,6 @@ You can find the "final" code for this section at this repository below. Keep in
 
 https://github.com/odziem/http-server
 
-<details>
-  <summary> 68. Code For This Section - Result capture </summary>
-
-  - `index.js`
-  ```
-
-  ```
-  ---
-
-  -   run `node index.js`
-
-  ```
-
-  ```
-</details>
 
 <details>
   <summary> Section 7: Web Server with Node.js </summary>
@@ -31,4 +16,4 @@ https://github.com/odziem/http-server
 
 ---
 
-[Previous](./67_Exploring-Habitable-Planets.md) | [Next]()
+[Previous](./67_Exploring-Habitable-Planets.md) | [Next](./69_What-is-a-Web-Server%3F.md)
