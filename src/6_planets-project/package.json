@@ -1,0 +1,15 @@
+{
+  "name": "6_planets-project",
+  "version": "1.0.0",
+  "description": "-   [kepler_data.csv](https://beatlesm.s3.us-west-1.amazonaws.com/Complete-NodeJS-Developer-in-2023/kepler_data.csv)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^5.3.5"
+  }
+}
