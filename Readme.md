@@ -113,6 +113,7 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [63 Streaming Large Data Files](contents/63_Streaming-Large-Data-Files.md)
   -   [64. Reading Our Planets Data](./contents/64_Reading-Our-Planets-Data.md)
   -   [65. Parsing Our Planets Data](./contents/65_Parsing-Our-Planets-Data.md)
+  -   [66. Finding Habitable Planets](./contents/66_Finding-Habitable-Planets.md)
 </details>
 
 
