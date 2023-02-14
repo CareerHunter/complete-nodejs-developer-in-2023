@@ -86,6 +86,21 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   47. [Should We Use index.js?](contents/47_Should-We-Use-index.js%3F.md)
 </details>
 
+<details>
+  <summary> Section 5: Node.js Fundamentals: Package Management </summary>
+
+  48. [NPM: The Node Package Manager](contents/48_NPM_The-Node-Package-Manager.md) 
+  49. [Creating Our First NPM Package](contents/49_Creating-Our-First-NPM-Package.md)
+  50. Packages And The NPM Registry
+  51. [Using Third Party Modules](contents/51_Using-Third-Party-Modules.md)
+  52. The node_modules Folder
+  53. [Semantic Versioning](contents/53_Semantic-Versioning.md)
+  54. [package-lock.json and Versioning](contents/54_package-lock.json-and-Versioning.md)
+  55. Vulnerabilities In Dependencies
+  56. [Installing NPM Tools: nodemon](contents/56_Installing-NPM-Tools_nodemon.md)
+  57. [LinkedIn Endorsements](contents/57_LinkedIn-Endorsements.md)
+</details>
+
 
 
 

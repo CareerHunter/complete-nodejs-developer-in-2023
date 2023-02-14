@@ -2,6 +2,11 @@ function decrpt(data) {
     return 'decrypted data'
 }
 
-exports.read = function read() {
+function read() {
     return decrpt('data')
 }
+
+module.exports = {
+    read,
+}
+
