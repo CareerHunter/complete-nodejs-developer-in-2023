@@ -111,9 +111,10 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [61 Setting Up Our CSV Parser](contents/61_Setting-Up-Our-CSV-Parser.md)
   -   [62 Latest Version of CSV Parser](contents/62_Latest-Version-of-CSV-Parser.md)
   -   [63 Streaming Large Data Files](contents/63_Streaming-Large-Data-Files.md)
-  -   [64. Reading Our Planets Data](./contents/64_Reading-Our-Planets-Data.md)
-  -   [65. Parsing Our Planets Data](./contents/65_Parsing-Our-Planets-Data.md)
-  -   [66. Finding Habitable Planets](./contents/66_Finding-Habitable-Planets.md)
+  -   [64. Reading Our Planets Data](contents/64_Reading-Our-Planets-Data.md)
+  -   [65. Parsing Our Planets Data](contents/65_Parsing-Our-Planets-Data.md)
+  -   [66. Finding Habitable Planets](contents/66_Finding-Habitable-Planets.md)
+  -   [67. Exploring Habitable Planets](contents/67_Exploring-Habitable-Planets.md)
 </details>
 
 

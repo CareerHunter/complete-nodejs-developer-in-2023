@@ -57,4 +57,4 @@ fs.createReadStream('kepler_data.csv')
 
 ---
 
-[Previous](./65_Parsing-Our-Planets-Data.md) | [Next]()
+[Previous](./65_Parsing-Our-Planets-Data.md) | [Next](./67_Exploring-Habitable-Planets.md)
