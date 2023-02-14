@@ -10,6 +10,27 @@ https://github.com/odziem/planets-project
 
   ---
 
+  - `index.js`
+  ```
+  const  { parse } = require('csv-parse');
+  const fs = require('fs');
+
+  const result = [];
+
+  fs.createReadStream('kepler_data.csv')
+      .on('data', (data) => {
+          result.push(data);
+      })
+      .on('error', (err) => {
+          console.log(err);
+      })
+      .on('end', () => {
+          console.log(result);
+          console.log('done');
+      });
+  // parse();
+  ```
+
   -   run `node index.js`
 
   <p align="center" ><img src="../imags/64_Reading-Our-Planets-Data.png" width="100%" ></a></p>
