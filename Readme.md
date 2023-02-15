@@ -128,7 +128,8 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [72. HTTP Responses](contents/72_HTTP-Responses.md)
   -   [73. Our First Webserver](contents/73_Our-First-Webserver.md)
   -   [74. HTTP APIs and Routing](contents/74_HTTP-APIs-and-Routing.md)
-  -   [75. ]()
+  -   [75. Parameterized URLs](./contents/75_Parameterized-URLs.md)
+  -   [76. ]()
 </details>
 
 

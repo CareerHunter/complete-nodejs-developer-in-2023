@@ -1,3 +1,12 @@
+# 75. Parameterized URLs
+
+https://github.com/odziem/http-server
+
+<details>
+  <summary> example</summary>
+
+  - `index.js`
+  ```
 const http = require('http');
 
 PORT = 3000;
@@ -52,3 +61,46 @@ server.on('request', (req, res) => {
 server.listen(PORT, () => {
   console.log(`Listening on port ${PORT}...`)
 });
+  ```
+  ---
+
+  -   run `node index.js`
+
+  ```
+  Listening on port 3000...
+  ```
+
+ ---
+
+ -  on webroswer goto `http://localhost:3000/friends` 
+
+ ---
+
+<p align="center" >
+    <img src="../imags/75_Parameterized-URLs.png" width="45%" >
+</p>
+
+---
+
+-  on webroswer goto `http://localhost:3000/friends/2` 
+
+---
+
+<p align="center" >
+    <img src="../imags/75_Parameterized-URLs_1.png" width="45%" >
+</p>
+
+---
+
+-  on webroswer goto `http://localhost:3000/friends/4` 
+
+```
+What happened???????
+A: empty !!!!!!!!!!!
+```
+</details>
+
+
+---
+
+[Previous](./74_HTTP-APIs-and-Routing.md) | [Next]()
