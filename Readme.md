@@ -130,7 +130,8 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [74. HTTP APIs and Routing](contents/74_HTTP-APIs-and-Routing.md)
   -   [75. Parameterized URLs](./contents/75_Parameterized-URLs.md)
   -   [76. Same Origin Policy](./contents/76_Same-Origin-Policy.md)
-  -   [77. ]()
+  -   [77. Exercise: Same Origin Policy]()
+  -   [78. ]()
 </details>
 
 

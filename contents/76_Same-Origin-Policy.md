@@ -18,4 +18,4 @@ https://github.com/odziem/http-server
 
 ---
 
-[Previous](./75_Parameterized-URLs.md) | [Next]()
+[Previous](./75_Parameterized-URLs.md) | [Next](./77_Exercise_Same-Origin-Policy.md)
