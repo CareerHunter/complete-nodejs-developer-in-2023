@@ -17,7 +17,7 @@
 <details>
   <summary> result capture </summary>
 
--   run `npm dev`
+-   run `node index.js`
 
 ```
 [

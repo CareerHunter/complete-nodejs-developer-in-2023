@@ -117,6 +117,14 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [67. Exploring Habitable Planets](contents/67_Exploring-Habitable-Planets.md)
 </details>
 
+<details>
+  <summary> Section 7: Web Server with Node.js </summary>
+
+  [Section 7: Web Server with Node.js](contents/Section-7_Web-Server-with-Node.js.md)
+  -   [68. Code For This Section](./contents/68_Code-For-This-Section.md)
+  -   [69. ]()
+</details>
+
 
 
 
