@@ -3,7 +3,7 @@
  <p align="center" >
     <img src="../imags/65_Parsing-Our-Planets-Data.png" width="45%" >
     <img src="../imags/65_Parsing-Our-Planets-Data_1.png" width="45%" >
- </a></p>
+ </p>
 
 ---
 
@@ -41,7 +41,7 @@ https://github.com/odziem/planets-project
 
   -   run `node index.js`
 
-  <p align="center" ><img src="../imags/65_Parsing-Our-Planets-Data_2.png" width="100%" ></a></p>
+  <p align="center" ><img src="../imags/65_Parsing-Our-Planets-Data_2.png" width="100%" ></p>
 
   ---
 

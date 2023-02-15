@@ -122,7 +122,13 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
 
   [Section 7: Web Server with Node.js](contents/Section-7_Web-Server-with-Node.js.md)
   -   [68. Code For This Section](./contents/68_Code-For-This-Section.md)
-  -   [69. ]()
+  -   [69. What is a Web Server?](./contents/69_What-is-a-Web-Server%3F.md)
+  -   [70. Introduction to HTTP Responses and Requests](./contents/70_Introduction-to-HTTP-Responses-and-Requests.md)
+  -   [71. HTTP Requests](./contents/71_HTTP-Requests.md)
+  -   [72. HTTP Responses](./contents/72_HTTP-Responses.md)
+  -   [73. Our First Webserver](./contents/73_Our-First-Webserver.md)
+  -   [74. HTTP APIs and Routing]()
+  -   [74. ]()
 </details>
 
 
