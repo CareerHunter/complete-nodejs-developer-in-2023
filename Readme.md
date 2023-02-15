@@ -129,7 +129,8 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [73. Our First Webserver](contents/73_Our-First-Webserver.md)
   -   [74. HTTP APIs and Routing](contents/74_HTTP-APIs-and-Routing.md)
   -   [75. Parameterized URLs](./contents/75_Parameterized-URLs.md)
-  -   [76. ]()
+  -   [76. Same Origin Policy](./contents/76_Same-Origin-Policy.md)
+  -   [77. ]()
 </details>
 
 
