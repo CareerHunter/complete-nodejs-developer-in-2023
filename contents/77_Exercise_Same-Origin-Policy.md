@@ -42,4 +42,4 @@ https://github.com/odziem/http-server
 
 ---
 
-[Previous](./76_Same-Origin-Policy.md) | [Next]()
+[Previous](./76_Same-Origin-Policy.md) | [Next](./78_Cross-Origin-Resource-Sharing-(CORS).md)

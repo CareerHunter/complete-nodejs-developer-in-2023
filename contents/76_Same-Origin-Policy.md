@@ -1,7 +1,7 @@
 # 76. Same Origin Policy
 
 <p align="center" >
-    <img src="../imags/76_Same-Origin-Policy.png" width="45%" >
+    <img src="../imags/76_Same-Origin-Policy.png" width="60%" >
 </p>
 
 
