@@ -120,7 +120,12 @@ server.listen(PORT, () => {
 
 </details>
 
+<details>
+  <summary> Section 7: Web Server with Node.js </summary>
 
+  - [Codebase: http-server](../src/7_http-server/)
+
+</details>
 ---
 
-[Previous](./78_Cross-Origin-Resource-Sharing-(CORS).md) | [Next]()
+[Previous](./78_Cross-Origin-Resource-Sharing-(CORS).md) | [Next](./80_Requests-and-Responses-as-Streams.md)

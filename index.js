@@ -19,7 +19,3 @@ console.log('myLiteralObj.constructor.prototype: ', myLiteralObj.constructor.pro
 const myCreatb = Object.create(myLiteralObj);
 console.log("Object.Create: ", myCreatb );
 
-fetch('http://localhost:3000/friends', {
-    method: 'POST',
-    body: JSON.stringify({id: 3, name: 'Ryan Dahl'})
-});

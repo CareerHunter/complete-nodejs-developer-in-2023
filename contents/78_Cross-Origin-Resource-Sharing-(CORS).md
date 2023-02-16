@@ -13,6 +13,13 @@
 https://github.com/odziem/http-server
 
 
+<details>
+  <summary> Section 7: Web Server with Node.js </summary>
+
+  - [Codebase: http-server](../src/7_http-server/)
+
+</details>
+
 ---
 
 [Previous](./77_Exercise_Same-Origin-Policy.md) | [Next](./79_POSTing-Data-to-the-Server.md)

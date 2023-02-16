@@ -1,3 +1,19 @@
+# 80. Requests and Responses as Streams
+
+ <p align="center" >
+    <img src="../imags/80_Requests-and-Responses-as-Streams.png" width="30%" >
+    <img src="../imags/65_Parsing-Our-Planets-Data_1.png" width="30%" > 
+    <img src="../imags/65_Parsing-Our-Planets-Data.png" width="30%" >       
+ </p>
+
+
+https://github.com/odziem/http-server
+
+<details>
+  <summary> example</summary>
+
+  - `index.js`
+  ```
 const http = require('http');
 
 PORT = 3000;
@@ -60,3 +76,47 @@ server.on('request', (req, res) => {
 server.listen(PORT, () => {
   console.log(`Listening on port ${PORT}...`)
 });
+  ```
+  ---
+
+  -   run `node index.js` 
+  -   on 'localhost:3000' console keyin
+
+  ```
+  fetch('http://localhost:3000/friends', {
+      method: 'POST',
+      body: JSON.stringify({id: 3, name: 'Grace Hopper'})
+    })
+    .then((response) => response.json())
+    .then((friend) => console.log(friend));
+  ```
+  
+---
+
+<p align="center" >
+    <img src="../imags/80_Requests-and-Responses-as-Streams_3.png" width="100%" >
+</p>
+
+ ---
+
+ -  on webroswer goto `http://localhost:3000/friends` 
+
+ ---
+
+<p align="center" >
+    <img src="../imags/80_Requests-and-Responses-as-Streams_1.png" width="100%" >
+</p>
+
+
+</details>
+
+<details>
+  <summary> Section 7: Web Server with Node.js </summary>
+
+  - [Codebase: http-server](../src/7_http-server/)
+
+</details>
+
+---
+
+[Previous](./79_POSTing-Data-to-the-Server.md                                                       ) | [Next]()
