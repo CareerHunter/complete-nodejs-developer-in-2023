@@ -55,7 +55,7 @@ server.on('request', (req, res) => {
         } else {
             res.end(JSON.stringify(friends));
         }
-    } else if (items[1] === 'messages'){
+    } else if (req.method === 'GET' && items[1] === 'messages'){
         res.setHeader('Content-Type', 'text/html'); 
         res.write('<html>');
         res.write('<body>');
@@ -119,4 +119,4 @@ server.listen(PORT, () => {
 
 ---
 
-[Previous](./79_POSTing-Data-to-the-Server.md                                                       ) | [Next]()
+[Previous](./79_POSTing-Data-to-the-Server.md) | [Next](./81_Web-Servers-Recap.md)

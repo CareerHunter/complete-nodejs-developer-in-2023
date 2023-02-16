@@ -39,7 +39,7 @@ server.on('request', (req, res) => {
         } else {
             res.end(JSON.stringify(friends));
         }
-    } else if (items[1] === 'messages'){
+    } else if (req.method === 'GET' && items[1] === 'messages'){
         res.setHeader('Content-Type', 'text/html'); 
         res.write('<html>');
         res.write('<body>');
