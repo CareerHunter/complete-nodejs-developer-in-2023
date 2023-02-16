@@ -15,4 +15,4 @@ https://github.com/odziem/http-server
 
 ---
 
-[Previous](./77_Exercise_Same-Origin-Policy.md) | [Next]()
+[Previous](./77_Exercise_Same-Origin-Policy.md) | [Next](./79_POSTing-Data-to-the-Server.md)
