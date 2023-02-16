@@ -17,4 +17,5 @@ console.log('myLiteralObj: ', myLiteralObj)
 console.log('myLiteralObj.constructor.prototype: ', myLiteralObj.constructor.prototype);
 
 const myCreatb = Object.create(myLiteralObj);
-console.log("Object.Create: ", myCreatb )
+console.log("Object.Create: ", myCreatb );
+

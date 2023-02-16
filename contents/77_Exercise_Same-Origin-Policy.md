@@ -38,7 +38,12 @@ Scroll down to see the answers...
 
 https://github.com/odziem/http-server
 
+<details>
+  <summary> Section 7: Web Server with Node.js </summary>
 
+  - [Codebase: http-server](../src/7_http-server/)
+
+</details>
 
 ---
 

@@ -1,14 +1,11 @@
-#  79. POSTing Data to the Server
+# 80. Requests and Responses as Streams
 
-<p align="center" >
-    <img src="../imags/78_Cross-Origin-Resource-Sharing-(CORS).png" width="45%" >
-    <img src="../imags/78_Cross-Origin-Resource-Sharing-(CORS)_1.png" width="45%" >
-</p>
+ <p align="center" >
+    <img src="../imags/80_Requests-and-Responses-as-Streams.png" width="30%" >
+    <img src="../imags/65_Parsing-Our-Planets-Data_1.png" width="30%" > 
+    <img src="../imags/65_Parsing-Our-Planets-Data.png" width="30%" >       
+ </p>
 
-
--   [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
-
--   [Allow-Listing and Whitelisting](https://en.wikipedia.org/wiki/Whitelist)
 
 https://github.com/odziem/http-server
 
@@ -41,12 +38,14 @@ const friends = [
 server.on('request', (req, res) => {
     const items = req.url.split('/');
     // /friends/2 => ['', 'friends', '2']
+    // /friends/
     if (req.method === 'POST' && items[1] === 'friends') {
         req.on('data', (data) => {
             const friend = data.toString();
             console.log('request:', friend);
             friends.push(JSON.parse(friend));
-        })
+        });
+        req.pipe(res);
     } else if (req.method === 'GET' && items[1] === 'friends'){
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');      
@@ -56,7 +55,7 @@ server.on('request', (req, res) => {
         } else {
             res.end(JSON.stringify(friends));
         }
-    } else if (items[1] === 'messages'){
+    } else if (req.method === 'GET' && items[1] === 'messages'){
         res.setHeader('Content-Type', 'text/html'); 
         res.write('<html>');
         res.write('<body>');
@@ -85,38 +84,29 @@ server.listen(PORT, () => {
 
   ```
   fetch('http://localhost:3000/friends', {
-    method: 'POST',
-    body: JSON.stringify({id: 3, name: 'Ryan Dahl'})
-  });
+      method: 'POST',
+      body: JSON.stringify({id: 3, name: 'Grace Hopper'})
+    })
+    .then((response) => response.json())
+    .then((friend) => console.log(friend));
   ```
   
 ---
 
 <p align="center" >
-    <img src="../imags/79_POSTing-Data-to-the-Server_3.png" width="100%" >
+    <img src="../imags/80_Requests-and-Responses-as-Streams_3.png" width="100%" >
 </p>
 
  ---
 
- -  on webroswer goto `http://localhost:3000/friends` and `http://localhost:3000/friends/3`
+ -  on webroswer goto `http://localhost:3000/friends` 
 
  ---
 
 <p align="center" >
-    <img src="../imags/79_POSTing-Data-to-the-Server.png" width="100%" >
+    <img src="../imags/80_Requests-and-Responses-as-Streams_1.png" width="100%" >
 </p>
 
----
-
-<p align="center" >
-    <img src="../imags/79_POSTing-Data-to-the-Server_1.png" width="100%" >
-</p>
-
----
-
-<p align="center" >
-    <img src="../imags/79_POSTing-Data-to-the-Server_2.png" width="100%" >
-</p>
 
 </details>
 
@@ -126,6 +116,7 @@ server.listen(PORT, () => {
   - [Codebase: http-server](../src/7_http-server/)
 
 </details>
+
 ---
 
-[Previous](./78_Cross-Origin-Resource-Sharing-(CORS).md) | [Next](./80_Requests-and-Responses-as-Streams.md)
+[Previous](./79_POSTing-Data-to-the-Server.md) | [Next](./81_Web-Servers-Recap.md)
