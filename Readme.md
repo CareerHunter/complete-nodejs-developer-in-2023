@@ -137,6 +137,13 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [81. Web Servers Recap](contents/81_Web-Servers-Recap.md)
 </details>
 
+<details>
+  <summary> Section 8: First Express.js API </summary>
+
+  [Section 8: First Express.js API](contents/Section-8_First-Express.js-API.md)
+  -   [82. Code For This Section](contents/82_Code-For-This-Section.md)
+</details>
+
 
 
 

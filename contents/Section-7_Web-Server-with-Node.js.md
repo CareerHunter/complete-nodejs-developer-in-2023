@@ -24,3 +24,7 @@ https://github.com/odziem/planets-project
 
 </details>
 
+---
+
+[Section-6](./Section-6_Node.js-File-IO-Planets-Project.md) | [Section-8](./Section-8_First-Express.js-API.md)
+
