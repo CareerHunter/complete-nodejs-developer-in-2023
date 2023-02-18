@@ -142,6 +142,10 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
 
   [Section 8: First Express.js API](contents/Section-8_First-Express.js-API.md)
   -   [82. Code For This Section](contents/82_Code-For-This-Section.md)
+  -   [83. Why Express?](contents/83_Why-Express%3F.md)
+  -   [84. Introduction to Express](contents/84_Introduction-to-Express.md)
+  -   [85. ]()
+  -   [86. ]()
 </details>
 
 
