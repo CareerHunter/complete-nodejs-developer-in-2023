@@ -8,12 +8,16 @@
   npx gitignore node
   ````
 
+  - install express `npm i express` 
+    - then `npm start` works without script: "start"
+
 
 <details>
   <summary> result capture </summary>
 
--   run `node index.js`
+-   run `npm start`
 
+- server.js
 ```
 
 ```
