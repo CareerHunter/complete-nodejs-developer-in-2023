@@ -153,8 +153,9 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [91. POST Requests in Express](contents/91_POST-Requests-in-Express.md)
   -   [92. Model View Controller (MVC)](contents/92_Model-View-Controller-(MVC).md)
   -   [93. Model View Controller in Express](contents/93_Model-View-Controller-in-Express.md)
-  -   [94. Express Routers]()
-  -   [95. ]()
+  -   [94. Express Routers](contents/94_Express-Routers.md)
+  -   [95. RESTful APIs](./contents/95_RESTful-APIs.md)
+  -   [96. ]()
 </details>
 
 

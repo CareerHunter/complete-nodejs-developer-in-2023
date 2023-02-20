@@ -1,4 +1,9 @@
-# 94. Express Routers
+# 95. RESTful APIs
+
+<p align="center" >
+    <img src="../imags/95_RESTful-APIs.png" width="45%" >
+    <img src="../imags/95_RESTful-APIs_1.png" width="45%" >
+</p> 
 
 https://github.com/odziem/express-project
 
@@ -178,5 +183,5 @@ module.exports = messagesRouter;
 
 ---
 
-[Previous](./93_Model-View-Controller-in-Express.md) | [Next](./95_RESTful-APIs.md)
+[Previous](./94_Express-Routers.md) | [Next]()
 
