@@ -4,30 +4,6 @@
 
 https://github.com/odziem/express-project
 
-<details>
-  <summary> example </summary>
-
-  - `server.js`
-```
-
-``` 
----
-
--   run `npm run watch` 
-
-<p align="center" >
-    <img src="../imags/91_POST-Requests-in-Express_1.png" width="80%" >
-</p> 
-
--  `postman` 
-
----
-
-<p align="center" >
-    <img src="../imags/91_POST-Requests-in-Express.png" width="80%" >
-</p> 
-
-</details>  
 
 <details>
   <summary> Section 8: First Express.js API </summary>
@@ -38,4 +14,4 @@ https://github.com/odziem/express-project
 
 ---
 
-[Previous](./91_POST-Requests-in-Express.md) | [Next]()
+[Previous](./91_POST-Requests-in-Express.md) | [Next](./93_Model-View-Controller-in-Express.md)

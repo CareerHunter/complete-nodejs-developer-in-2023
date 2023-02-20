@@ -152,8 +152,9 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [90. Writing Our Own Logging](contents/90_Writing-Our-Own-Logging.md)
   -   [91. POST Requests in Express](contents/91_POST-Requests-in-Express.md)
   -   [92. Model View Controller (MVC)](contents/92_Model-View-Controller-(MVC).md)
-  -   [93. ]()
-  -   [94. ]()
+  -   [93. Model View Controller in Express](contents/93_Model-View-Controller-in-Express.md)
+  -   [94. Express Routers]()
+  -   [95. ]()
 </details>
 
 
