@@ -14,15 +14,6 @@ https://github.com/odziem/express-project
 
 
 <details>
-  <summary> example</summary>
-
-  - `index.js`
-    ```
-    
-    ```
-</details>  
-
-<details>
   <summary> Section 8: First Express.js API </summary>
 
   - [Codebase: express-project](../src/8_express-project/)
@@ -31,4 +22,4 @@ https://github.com/odziem/express-project
 
 ---
 
-[Previous](./84_Introduction-to-Express.md) | [Next]()
+[Previous](./84_Introduction-to-Express.md) | [Next](./86_Route-Parameters.md)
