@@ -9,17 +9,24 @@
   ````
 
   - install express `npm i express` 
-    - then `npm start` works without script: "start"
+ 
+  - install nodemon `npm i nodemon --save-dev`
+
+  - add script: `"watch": "nodemon server.js",` in `package.json`
 
 
 <details>
   <summary> result capture </summary>
 
--   run `npm start`
+-   run `npm run watch`
 
-- server.js
 ```
-
+[nodemon] 2.0.20
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node server.js`
+Listening on 3000...
 ```
 
 </details>
