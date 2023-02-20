@@ -1,6 +1,6 @@
 # 84. Introduction to Express
 
-**Note 1:** `server.js` under `express` can run `npm start` without script: "start"
+**Note 1:** create a `server.js` under `express` can run `npm start` without script: "start"
 
 **Note 2:** **example 1**, `express` handle `Content-Type: text/html; charset=utf-8`
 
