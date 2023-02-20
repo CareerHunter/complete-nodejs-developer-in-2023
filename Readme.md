@@ -155,7 +155,9 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [93. Model View Controller in Express](contents/93_Model-View-Controller-in-Express.md)
   -   [94. Express Routers](contents/94_Express-Routers.md)
   -   [95. RESTful APIs](./contents/95_RESTful-APIs.md)
-  -   [96. ]()
+  -   [96. Create Read Update and Delete (CRUD)](./contents/96_Create-Read-Update-and-Delete-(CRUD).md)
+  -   [97. ]()
+  -   [98. ]()
 </details>
 
 
