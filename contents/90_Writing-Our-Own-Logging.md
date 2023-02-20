@@ -1,3 +1,13 @@
+# 90. Writing Our Own Logging
+
+
+https://github.com/odziem/express-project
+
+<details>
+  <summary> example </summary>
+
+  - `server.js`
+```
 const express = require('express');
 
 const app = express();
@@ -21,24 +31,6 @@ app.use((req, res, next) => {
     const delta = Date.now() - start;
     console.log(`${req.method} ${req.url} ${delta}ms`);
 });
-
-app.use(express.json());
-
-app.post('/friends', (req, res) =>{
-    if (!req.body.name) {
-        res.status(400).json({
-            error: "Missing friend name"
-        })
-    }
-
-    const newFriends = {
-        name: req.body.name,
-        id: friends.length
-    };
-    friends.push(newFriends);
-
-    res.json(newFriends)
-}); 
 
 app.get('/friends', (req, res) =>{
     res.json(friends);
@@ -67,3 +59,27 @@ app.post('/messages', (req, res) =>{
 app.listen(PORT, () => {
     console.log(`Listening on ${PORT}...`);
 });
+``` 
+---
+
+-   run `npm run watch` 
+
+---
+
+<p align="center" >
+    <img src="../imags/90_Writing-Our-Own-Logging.png" width="80%" >
+</p> 
+
+
+</details>  
+
+<details>
+  <summary> Section 8: First Express.js API </summary>
+
+  - [Codebase: express-project](../src/8_express-project/)
+
+</details>
+
+---
+
+[Previous](./89_Middleware.md) | [Next](./91_POST-Requests-in-Express.md)

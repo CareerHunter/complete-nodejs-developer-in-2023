@@ -149,8 +149,9 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [87. Postman and Insomnia](contents/87_Postman-and-Insomnia.md)
   -   [88. Development Dependencies](contents/88_Development-Dependencies.md)
   -   [89. Middleware](contents/89_Middleware.md)
-  -   [90. ]()
+  -   [90. Writing Our Own Logging](contents/90_Writing-Our-Own-Logging.md)
   -   [91. ]()
+  -   [92. ]()
 </details>
 
 
