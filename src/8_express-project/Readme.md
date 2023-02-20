@@ -21,12 +21,7 @@
 -   run `npm run watch`
 
 ```
-[nodemon] 2.0.20
-[nodemon] to restart at any time, enter `rs`
-[nodemon] watching path(s): *.*
-[nodemon] watching extensions: js,mjs,json
-[nodemon] starting `node server.js`
-Listening on 3000...
+
 ```
 
 </details>
