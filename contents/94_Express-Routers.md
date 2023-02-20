@@ -9,8 +9,8 @@ https://github.com/odziem/express-project
 ```
 const express = require('express');
 
-const friendsController = require('./controllers/friends.controller');
-const messagesController = require('./controllers/messages.controller');
+const friendsRouter = require('./routes/friends.router.js');
+const messagesRouter = require('./routes/messages.router.js');
 
 const app = express();
 
@@ -20,17 +20,13 @@ app.use((req, res, next) => {
     const start = Date.now();
     next();
     const delta = Date.now() - start;
-    console.log(`${req.method} ${req.url} ${delta}ms`);
+    console.log(`${req.method} ${req.baseUrl} ${req.url} ${delta}ms`);
 });
 
 app.use(express.json());
 
-app.post('/friends', friendsController.postFriend); 
-app.get('/friends', friendsController.getFriends); 
-app.get('/friends/:friendId', friendsController.getFriend); 
-
-app.get('/messages', messagesController.getMessages);
-app.post('/messages', messagesController.postMessages);
+app.use('/friends', friendsRouter);
+app.use('/messages', messagesRouter);
 
 app.listen(PORT, () => {
     console.log(`Listening on ${PORT}...`);
@@ -110,6 +106,40 @@ module.exports = {
     getMessages,
     postMessages
 }
+```
+
+-   `routes/friends.router.js`
+```
+const express = require('express');
+
+const friendsController = require('../controllers/friends.controller');
+
+const friendsRouter = express.Router();
+
+friendsRouter.use((req, res, next) => {
+    console.log('ip address:', req.ip);
+    next();
+});
+friendsRouter.post('/', friendsController.postFriend); 
+friendsRouter.get('/', friendsController.getFriends); 
+friendsRouter.get('/:friendId', friendsController.getFriend); 
+
+module.exports = friendsRouter;
+```
+
+-   `routes/messages.router.js`
+```
+const express = require('express');
+
+const messagesController = require('../controllers/messages.controller');
+
+const messagesRouter = express.Router();
+
+messagesRouter.get('/', messagesController.getMessages);
+messagesRouter.post('/', messagesController.postMessages);
+
+module.exports = messagesRouter;
+
 ```
 
 ---
