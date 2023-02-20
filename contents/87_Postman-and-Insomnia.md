@@ -1,5 +1,8 @@
 # 87. Postman and Insomnia
 
+-   [Official Postman Website](https://www.postman.com/)
+-   [Official Insomnia Website](https://insomnia.rest/)
+
 
 https://github.com/odziem/express-project
 
@@ -14,36 +17,14 @@ https://github.com/odziem/express-project
 
 -   run `npm start` 
 
-- go to `http://localhost:3000/`, `http://localhost:3000/friends`, `http://localhost:3000/friends/0`, `http://localhost:3000/friends/1`, `http://localhost:3000/friends/2`
+-   go to `http://localhost:3000/`
 
 ---
 
 <p align="center" >
     <img src="../imags/86_Route-Parameters.png" width="80%" >
 </p> 
----
 
-<p align="center" >
-    <img src="../imags/86_Route-Parameters_1.png" width="80%" >
-</p> 
-
----
-
-<p align="center" >
-    <img src="../imags/86_Route-Parameters_2.png" width="80%" >
-</p> 
-
----
-
-<p align="center" >
-    <img src="../imags/86_Route-Parameters_3.png" width="80%" >
-</p> 
-
----
-
-<p align="center" >
-    <img src="../imags/86_Route-Parameters_4.png" width="80%" >
-</p> 
 
 </details>  
 
@@ -56,4 +37,4 @@ https://github.com/odziem/express-project
 
 ---
 
-[Previous](./85_Express-vs-Next.js-vs-Koa.md) | [Next]()
+[Previous](./86_Route-Parameters.md) | [Next]()
