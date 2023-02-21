@@ -1,6 +1,6 @@
 # 84. Introduction to Express
 
-**Note 1:** `server.js` under `express` can run `npm start` without script: "start"
+**Note 1:** create a `server.js` under `express` can run `npm start` without script: "start"
 
 **Note 2:** **example 1**, `express` handle `Content-Type: text/html; charset=utf-8`
 
@@ -20,17 +20,17 @@ const app = express();
 
 const PORT = 3000;
 
-app.get('/', (req, res) =>[
+app.get('/', (req, res) =>{
     res.send('Heeeelloooo')
-]); 
+}); 
 
-app.get('/messages', (req, res) =>[
+app.get('/messages', (req, res) =>{
     res.send('<ul><li>Helloo Albert!</li></ul>')
-]);
+});
 
-app.post('/messages', (req, res) =>[
+app.post('/messages', (req, res) =>{
     res.send('Updating messages...')
-]);
+});
 
 app.listen(PORT, () => {
     console.log(`Listening on ${PORT}...`);
@@ -58,20 +58,20 @@ const app = express();
 
 const PORT = 3000;
 
-app.get('/', (req, res) =>[
+app.get('/', (req, res) =>{
     res.send({
         id: 1,
         name: 'Sir Isaac Newton'
     })
-]);
+});
 
-app.get('/messages', (req, res) =>[
+app.get('/messages', (req, res) =>{
     res.send('<ul><li>Helloo Albert!</li></ul>')
-]);
+});
 
-app.post('/messages', (req, res) =>[
+app.post('/messages', (req, res) =>{
     res.send('Updating messages...')
-]);
+});
 
 app.listen(PORT, () => {
     console.log(`Listening on ${PORT}...`);

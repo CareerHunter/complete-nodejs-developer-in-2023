@@ -9,18 +9,24 @@
   ````
 
   - install express `npm i express` 
-    - then `npm start` works without script: "start"
+ 
+  - install nodemon `npm i nodemon --save-dev`
+
+  - add script: `"watch": "nodemon server.js",` in `package.json`
+
+  - install hbs `npm i hbs --save`
 
 
 <details>
   <summary> result capture </summary>
 
--   run `npm start`
+-   run `npm run watch` 
 
-- server.js
-```
+-  `http://localhost:3000/`
 
-```
+<p align="center" >
+    <img src="../imags/99_Templating-Engines.png" width="90%" >
+</p> 
 
 </details>
 
