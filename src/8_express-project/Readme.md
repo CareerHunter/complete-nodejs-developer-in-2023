@@ -25,7 +25,7 @@
 -  `http://localhost:3000/`
 
 <p align="center" >
-    <img src="../imags/99_Templating-Engines.png" width="90%" >
+    <img src="../../imags/99_Templating-Engines.png" width="90%" >
 </p> 
 
 </details>
