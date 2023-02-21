@@ -159,9 +159,15 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [97. Sending Files](contents/97_Sending-Files.md)
   -   [98. Serving Websites With Node](contents/98_Serving-Websites-With-Node.md)
   -   [99. Templating Engines](contents/99_Templating-Engines.md)
-  -   [100. ]()
+  -   [100. Layouts and Separation of Concerns](contents/100_Layouts-and-Separation-of-Concerns.md)
 </details>
 
+<details>
+  <summary> Section 9: NASA Project </summary>
+
+  [Section 9: NASA Project]()
+  -   [101. Code For This Section]()  
+</details>
 
 
 

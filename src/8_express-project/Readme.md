@@ -20,11 +20,13 @@
 <details>
   <summary> result capture </summary>
 
--   run `npm run watch`
+-   run `npm run watch` 
 
-```
+-  `http://localhost:3000/`
 
-```
+<p align="center" >
+    <img src="../imags/99_Templating-Engines.png" width="90%" >
+</p> 
 
 </details>
 
