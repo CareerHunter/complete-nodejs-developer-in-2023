@@ -1,11 +1,14 @@
-# 98. Serving Websites With Node
+# 99. Templating Engines
 
--   [Bonus: Key Feature of a Content Delivery Network](https://aws.amazon.com/cloudfront/features/?whats-new-cloudfront.sort-by=item.additionalFields.postDateTime&whats-new-cloudfront.sort-order=desc)
+-   [Express Templating Engines](https://expressjs.com/en/resources/template-engines.html)
+
 
 https://github.com/odziem/express-project
 
 <details>
   <summary> example </summary>
+
+  - install hbs `npm i hbs --save`
 
   - `server.js`
 ```
@@ -16,6 +19,9 @@ const friendsRouter = require('./routes/friends.router.js');
 const messagesRouter = require('./routes/messages.router.js');
 
 const app = express();
+
+app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, 'views'));
 
 const PORT = 3000;
 
@@ -29,6 +35,12 @@ app.use((req, res, next) => {
 app.use('/site', express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.render('index', {
+        title: "My Friends Are VERY Clever",
+        caption: "Let's go skiing!"
+    })
+});
 app.use('/friends', friendsRouter);
 app.use('/messages', messagesRouter);
 
@@ -161,17 +173,18 @@ body {
 ```
 
 -   `public/image/skimountain.jpeg`
--   `public/index.html`
+
+-   `views/index.hbs`
 ```
 <!DOCTYPE html>
 <html>
   <head>
-    <title> My Friends Are Clever </title>
-    <link rel='stylesheet' href='css/style.css' />
+    <title> {{title}} </title>
+    <link rel='stylesheet' href='site/css/style.css' />
   </head>
   <body>
-    <h1>France is beautiful!</h1>
-    <img src="images/skimountain.jpeg" alt = "Ski mountain">
+    <h1> {{caption}} </h1>
+    <img src="site/images/skimountain.jpeg" alt = "Ski mountain">
   </body>
 </html>
 ```
@@ -180,21 +193,12 @@ body {
 
 -   run `npm run watch` 
 
--  `http://localhost:3000/site/index.html`
+-  `http://localhost:3000/`
 
 <p align="center" >
-    <img src="../imags/98_Serving-Websites-With-Node.png" width="90%" >
+    <img src="../imags/99_Templating-Engines.png" width="90%" >
 </p> 
 
----
-
--   even `cd routes` run `node ../server.js` - ?????? Confused!!!!!!
-
--  `http://localhost:3000/site/index.html`
-
-<p align="center" >
-    <img src="../imags/98_Serving-Websites-With-Node.png" width="90%" >
-</p> 
 
 </details>  
 
@@ -207,4 +211,4 @@ body {
 
 ---
 
-[Previous](./97_Sending-Files.md) | [Next](./99_Templating-Engines.md)
+[Previous](./98_Serving-Websites-With-Node.md) | [Next]()

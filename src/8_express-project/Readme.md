@@ -14,6 +14,8 @@
 
   - add script: `"watch": "nodemon server.js",` in `package.json`
 
+  - install hbs `npm i hbs --save`
+
 
 <details>
   <summary> result capture </summary>
