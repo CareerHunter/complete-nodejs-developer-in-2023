@@ -1,8 +1,6 @@
-# 97. Sending Files
+# 98. Serving Websites With Node
 
-<p align="center" >
-    <img src="../imags/skimountain.jpeg" width="80%" >
-</p> 
+-   [Bonus: Key Feature of a Content Delivery Network](https://aws.amazon.com/cloudfront/features/?whats-new-cloudfront.sort-by=item.additionalFields.postDateTime&whats-new-cloudfront.sort-order=desc)
 
 https://github.com/odziem/express-project
 
@@ -12,6 +10,7 @@ https://github.com/odziem/express-project
   - `server.js`
 ```
 const express = require('express');
+const path = require('path');
 
 const friendsRouter = require('./routes/friends.router.js');
 const messagesRouter = require('./routes/messages.router.js');
@@ -27,6 +26,7 @@ app.use((req, res, next) => {
     console.log(`${req.method} ${req.baseUrl} ${req.url} ${delta}ms`);
 });
 
+app.use('/site', express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 
 app.use('/friends', friendsRouter);
@@ -101,7 +101,7 @@ module.exports = {
 const path = require('path');
 
 function getMessages (req, res)  {
-    res.sendFile(path.join(__dirname, '..', 'public', 'skimountain.jpeg'));
+    res.sendFile(path.join(__dirname, '..', 'public', 'images', 'skimountain.jpeg'));
     // res.send('<ul><li>Helloo Albert!</li></ul>');
 }
 
@@ -149,29 +149,51 @@ module.exports = messagesRouter;
 
 ```
 
+-   `public/css/style.css`
+```
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+  a {
+    color: #00B7FF;
+  }
+```
+
+-   `public/image/skimountain.jpeg`
+-   `public/index.html`
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> My Friends Are Clever </title>
+    <link rel='stylesheet' href='css/style.css' />
+  </head>
+  <body>
+    <h1>France is beautiful!</h1>
+    <img src="images/skimountain.jpeg" alt = "Ski mountain">
+  </body>
+</html>
+```
+
 ---
 
 -   run `npm run watch` 
 
--  `postman` 
-
+-  `http://localhost:3000/site/index.html`
 
 <p align="center" >
-    <img src="../imags/97_Sending-Files.png" width="90%" >
+    <img src="../imags/98_Serving-Websites-With-Node.png" width="90%" >
 </p> 
 
 ---
 
-<p align="center" >
-    <img src="../imags/97_Sending-Files_1.png" width="90%" >
-</p> 
+-   even `cd routes` run `node ../server.js` - ?????? Confused!!!!!!
 
----
-
--  `http://localhost:3000/messages`
+-  `http://localhost:3000/site/index.html`
 
 <p align="center" >
-    <img src="../imags/97_Sending-Files_2.png" width="90%" >
+    <img src="../imags/98_Serving-Websites-With-Node.png" width="90%" >
 </p> 
 
 </details>  
@@ -185,4 +207,4 @@ module.exports = messagesRouter;
 
 ---
 
-[Previous](./96_Create-Read-Update-and-Delete-(CRUD).md) | [Next](./98_Serving-Websites-With-Node.md)
+[Previous](./97_Sending-Files.md) | [Next]()
