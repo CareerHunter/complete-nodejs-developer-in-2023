@@ -1,4 +1,4 @@
-# 105. What You Need To Know
+# 106. React.js Front End Code Walkthrough
 
 https://github.com/odziem/nasa-project
 
@@ -11,4 +11,4 @@ https://github.com/odziem/nasa-project
 
 ---
 
-[Previous](./104_NASA-Dashboard-Functionality.md) | [Next](./106_React.js-Front-End-Code-Walkthrough.md)
+[Previous](./105_What-You-Need-To-Know.md) | [Next]()
