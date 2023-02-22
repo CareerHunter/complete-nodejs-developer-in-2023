@@ -166,10 +166,11 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   <summary> Section 9: NASA Project </summary>
 
   [Section 9: NASA Project](contents/Section-9_NASA-Project.md)
-  -   [101. Code For This Section](./contents/101_Code-For-This-Section.md)  
-  -   [102. Introduction & Architecture](./contents/102_Introduction-%26-Architecture.md)  
-  -   [103. ](./contents)  
-  -   [104. ](./contents)  
+  -   [101. Code For This Section](contents/101_Code-For-This-Section.md)  
+  -   [102. Introduction & Architecture](contents/102_Introduction-%26-Architecture.md)  
+  -   [103. NASA Dashboard Front End Setup](contents/103_NASA-Dashboard-Front-End-Setup.md)  
+  -   [104. ](contents)  
+  -   [105. ](contents)  
 </details>
 
 
