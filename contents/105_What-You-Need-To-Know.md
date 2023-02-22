@@ -1,7 +1,4 @@
-# 104. NASA Dashboard Functionality
-
-
-
+# 105. What You Need To Know
 
 https://github.com/odziem/nasa-project
 
@@ -14,4 +11,4 @@ https://github.com/odziem/nasa-project
 
 ---
 
-[Previous](./103_NASA-Dashboard-Front-End-Setup.md) | [Next](./105_What-You-Need-To-Know.md)
+[Previous](./104_NASA-Dashboard-Functionality.md) | [Next]()

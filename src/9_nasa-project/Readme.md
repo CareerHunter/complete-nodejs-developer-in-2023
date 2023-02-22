@@ -11,7 +11,7 @@
   - run client `npm start`
 
 <details>
-  <summary> NASA Dashboard Front End Setup </summary>  
+  <summary> Capture - FrontEnd Setup </summary>  
 
   <p align="center" >
     <img src="../imags/103_NASA-Dashboard-Front-End-Setup.png" width="30%" >
@@ -21,7 +21,7 @@
 
 </details>
 
-## Setup Server
+## NASA Mission Control Project - Server Setup 
 
 - install package.json and create .gitignore file 
   ```
@@ -37,7 +37,7 @@
 
 
 <details>
-  <summary> result capture </summary>
+  <summary> Capture - Server Setup </summary>
 
 -   run `npm run watch` 
 

@@ -170,8 +170,9 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [102. Introduction & Architecture](contents/102_Introduction-%26-Architecture.md)  
   -   [103. NASA Dashboard Front End Setup](contents/103_NASA-Dashboard-Front-End-Setup.md)  
   -   [104. NASA Dashboard Functionality](contents/104_NASA-Dashboard-Functionality.md)  
-  -   [105. ](contents)  
+  -   [105. What You Need To Know](contents/105_What-You-Need-To-Know.md)  
   -   [106. ](contents)  
+  -   [107. ](contents)  
 </details>
 
 
