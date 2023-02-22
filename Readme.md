@@ -174,8 +174,9 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [106. React.js Front End Code Walkthrough](contents/106_React.js-Front-End-Code-Walkthrough.md)  
   -   [107. API Server Setup](contents/107_API-Server-Setup.md)  
   -   [108. Environment Variables On Windows](contents/108_Environment-Variables-On-Windows.md)  
-  -   [109. ](contents)  
-  -   [109. ](contents)  
+  -   [109. GET /planets](contents/109_GET-planets.md)  
+  -   [110. ](contents)  
+  -   [111. ](contents)  
 </details>
 
 <details>

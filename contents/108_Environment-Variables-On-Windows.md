@@ -26,4 +26,4 @@ https://github.com/odziem/nasa-project
 
 ---
 
-[Previous](./107_API-Server-Setup.md) | [Next]()
+[Previous](./107_API-Server-Setup.md) | [Next](./109_GET-planets.md)
