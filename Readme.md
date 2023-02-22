@@ -172,8 +172,16 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [104. NASA Dashboard Functionality](contents/104_NASA-Dashboard-Functionality.md)  
   -   [105. What You Need To Know](contents/105_What-You-Need-To-Know.md)  
   -   [106. React.js Front End Code Walkthrough](contents/106_React.js-Front-End-Code-Walkthrough.md)  
-  -   [107. ](contents)  
+  -   [107. API Server Setup](contents/107_API-Server-Setup.md)  
   -   [108. ](contents)  
+  -   [109. ](contents)  
+</details>
+
+<details>
+  <summary> Section 10: Testing APIs </summary>
+
+  [Section 10: Testing APIs](contents)
+  -   [131. ](contents)    
 </details>
 
 

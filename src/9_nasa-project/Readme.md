@@ -21,7 +21,7 @@
 
 </details>
 
-## NASA Mission Control Project - Server Setup 
+## NASA API Server Setup 
 
 - install package.json and create .gitignore file 
   ```
