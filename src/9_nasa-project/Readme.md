@@ -8,6 +8,8 @@
 
   - create gitignore file `npx gitignore node` 
 
+  - install CORS `npm i cors`
+
   - run client `npm start`
 
 <details>

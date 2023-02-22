@@ -1,4 +1,50 @@
-# 109. GET /planets
+# 110. CORS Middleware
+
+-   [CORS Middleware Package](https://www.npmjs.com/package/cors)
+
+<p align="center" >
+    <img src="../imags/110_CORS-Middleware.png" width="45%" >
+    <img src="../imags/110_CORS-Middleware_2.png" width="45%" >
+</p> 
+
+---
+
+- [78. Cross Origin Resource Sharing (CORS)](./78_Cross-Origin-Resource-Sharing-(CORS).md)
+
+---
+
+<p align="center" >
+    <img src="../imags/78_Cross-Origin-Resource-Sharing-(CORS).png" width="45%" >
+    <img src="../imags/78_Cross-Origin-Resource-Sharing-(CORS)_1.png" width="45%" >
+</p>
+
+---
+
+- install CORS on **server** `npm i cors`
+```
+npm i cors
+```
+
+- update `app.js`
+
+```
+const express = require('express');
+const cors = require('cors');
+
+const planetsRouter = require('./routes/planets/planets.router');
+
+const app = express();
+
+app.use(cors({
+    origin: 'http://localhost:3000',
+}));
+app.use(express.json());
+app.use(planetsRouter);
+
+module.exports = app;
+```
+
+---
 
 https://github.com/odziem/nasa-project
 
@@ -81,11 +127,13 @@ server.listen(PORT, () => {
 -   `server/src/app.js`
 ```
 const express = require('express');
+const cors = require('cors');
 
 const planetsRouter = require('./routes/planets/planets.router');
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 app.use(planetsRouter);
 
@@ -143,8 +191,8 @@ Listening on port 8000...
 ```
 
 <p align="center" >
-    <img src="../imags/109_GET-planets.png" width="100%" >
-    <img src="../imags/109_GET-planets_2.png" width="100%" >
+    <img src="../imags/110_CORS-Middleware_3.png" width="100%" >
+    <img src="../imags/110_CORS-Middleware_4.png" width="100%" >
 </p> 
 
 </details>  
@@ -158,4 +206,4 @@ Listening on port 8000...
 
 ---
 
-[Previous](./108_Environment-Variables-On-Windows.md) | [Next](./110_CORS-Middleware.md)
+[Previous](./109_GET-planets.md) | [Next]()
