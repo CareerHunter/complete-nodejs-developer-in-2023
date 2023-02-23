@@ -9,45 +9,8 @@
 https://github.com/odziem/nasa-project
 
 -   `server/src/models/planets.model.js`
-```
-const  { parse } = require('csv-parse');
-const fs = require('fs');
 
-const habitablePlanets = [];
-
-function isHabitablePlanet(planet) {
-    return planet['koi_disposition'] === 'CONFIRMED'
-        && planet['koi_insol'] > 0.36 && planet['koi_insol'] < 1.11
-        && planet['koi_prad'] < 1.6;
-  }
-
-fs.createReadStream('kepler_data.csv')
-    .pipe(parse({
-        comment: '#',
-        columns: true
-    }))
-    .on('data', (data) => {
-        if (isHabitablePlanet(data)){
-            habitablePlanets.push(data);
-        }
-    })
-    .on('error', (err) => {
-        console.log(err);
-    })
-    .on('end', () => {
-        console.log(habitablePlanets.map((planet) => {
-            return planet['kepler_name'];
-          }));
-        console.log(`${habitablePlanets.length} habitable planets found!`);
-    });
-
-
-module.exports = {
-    planets: habitablePlanets,
-};
-```
-
-- `server/src/data/kepler_data.csv`
+-   `server/src/data/kepler_data.csv`
 
 <details>
   <summary> NASA API Server Setup </summary>
@@ -239,4 +202,4 @@ Listening on port 8000...
 
 ---
 
-[Previous](./111_Models-vs-Controllers-vs-Routers.md) | [Next]()
+[Previous](./111_Models-vs-Controllers-vs-Routers.md) | [Next](./113_Loading-Data-On-Startup.md)

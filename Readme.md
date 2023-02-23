@@ -178,8 +178,9 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [110. CORS Middleware](contents/110_CORS-Middleware.md)  
   -   [111. Models vs Controllers vs Routers](contents/111_Models-vs-Controllers-vs-Routers.md)  
   -   [112. The Planets Model](contents/112_The-Planets-Model.md)  
-  -   [113. ](contents)  
+  -   [113. Loading Data On Startup](contents/113_Loading-Data-On-Startup.md)  
   -   [114. ](contents)  
+  -   [115. ](contents)  
 </details>
 
 <details>
