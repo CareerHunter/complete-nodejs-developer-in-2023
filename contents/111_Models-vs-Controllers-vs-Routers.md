@@ -1,48 +1,10 @@
-# 110. CORS Middleware
-
--   [CORS Middleware Package](https://www.npmjs.com/package/cors)
+# 111. Models vs Controllers vs Routers
 
 <p align="center" >
-    <img src="../imags/110_CORS-Middleware.png" width="45%" >
-    <img src="../imags/110_CORS-Middleware_2.png" width="45%" >
+    <img src="../imags/111_Models-vs-Controllers-vs-Routers.png" width="30%" >
+    <img src="../imags/111_Models-vs-Controllers-vs-Routers_2.png" width="30%" >
+    <img src="../imags/111_Models-vs-Controllers-vs-Routers_3.png" width="30%" >
 </p> 
-
----
-
-- [78. Cross Origin Resource Sharing (CORS)](./78_Cross-Origin-Resource-Sharing-(CORS).md)
-
----
-
-<p align="center" >
-    <img src="../imags/78_Cross-Origin-Resource-Sharing-(CORS).png" width="45%" >
-    <img src="../imags/78_Cross-Origin-Resource-Sharing-(CORS)_1.png" width="45%" >
-</p>
-
----
-
-- install CORS on **server** `npm i cors`
-```
-npm i cors
-```
-
-- update `app.js`
-
-```
-const express = require('express');
-const cors = require('cors');
-
-const planetsRouter = require('./routes/planets/planets.router');
-
-const app = express();
-
-app.use(cors({
-    origin: 'http://localhost:3000',
-}));
-app.use(express.json());
-app.use(planetsRouter);
-
-module.exports = app;
-```
 
 ---
 
@@ -206,4 +168,4 @@ Listening on port 8000...
 
 ---
 
-[Previous](./109_GET-planets.md) | [Next](./111_Models-vs-Controllers-vs-Routers.md)
+[Previous](./110_CORS-Middleware.md) | [Next]()
