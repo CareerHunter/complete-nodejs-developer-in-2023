@@ -179,8 +179,9 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [111. Models vs Controllers vs Routers](contents/111_Models-vs-Controllers-vs-Routers.md)  
   -   [112. The Planets Model](contents/112_The-Planets-Model.md)  
   -   [113. Loading Data On Startup](contents/113_Loading-Data-On-Startup.md)  
-  -   [114. ](contents)  
+  -   [114. Common Issues With NPM Scripts](contents/114_Common-Issues-With-NPM-Scripts.md)  
   -   [115. ](contents)  
+  -   [116. ](contents)  
 </details>
 
 <details>
