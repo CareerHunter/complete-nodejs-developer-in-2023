@@ -12,6 +12,8 @@
 
   - run client `npm start`
 
+  - install csv-parse `npm i csv-parse`
+
 <details>
   <summary> Capture - FrontEnd Setup </summary>  
 

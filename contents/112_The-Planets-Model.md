@@ -1,14 +1,53 @@
-# 111. Models vs Controllers vs Routers
+# 112. The Planets Model
 
-<p align="center" >
-    <img src="../imags/111_Models-vs-Controllers-vs-Routers.png" width="30%" >
-    <img src="../imags/111_Models-vs-Controllers-vs-Routers_2.png" width="30%" >
-    <img src="../imags/111_Models-vs-Controllers-vs-Routers_3.png" width="30%" >
-</p> 
+-   [kepler_data.csv](https://beatlesm.s3.us-west-1.amazonaws.com/Complete-NodeJS-Developer-in-2023/kepler_data.csv)
 
----
+-   [planets_project_code.js](https://beatlesm.s3.us-west-1.amazonaws.com/Complete-NodeJS-Developer-in-2023/planets_project_code.js)
+
+-   [Section 6: Node.js File I/O - Planets Project](../../contents/Section-6_Node.js-File-IO-Planets-Project.md) 
 
 https://github.com/odziem/nasa-project
+
+-   `server/src/models/planets.model.js`
+```
+const  { parse } = require('csv-parse');
+const fs = require('fs');
+
+const habitablePlanets = [];
+
+function isHabitablePlanet(planet) {
+    return planet['koi_disposition'] === 'CONFIRMED'
+        && planet['koi_insol'] > 0.36 && planet['koi_insol'] < 1.11
+        && planet['koi_prad'] < 1.6;
+  }
+
+fs.createReadStream('kepler_data.csv')
+    .pipe(parse({
+        comment: '#',
+        columns: true
+    }))
+    .on('data', (data) => {
+        if (isHabitablePlanet(data)){
+            habitablePlanets.push(data);
+        }
+    })
+    .on('error', (err) => {
+        console.log(err);
+    })
+    .on('end', () => {
+        console.log(habitablePlanets.map((planet) => {
+            return planet['kepler_name'];
+          }));
+        console.log(`${habitablePlanets.length} habitable planets found!`);
+    });
+
+
+module.exports = {
+    planets: habitablePlanets,
+};
+```
+
+- `server/src/data/kepler_data.csv`
 
 <details>
   <summary> NASA API Server Setup </summary>
@@ -133,9 +172,41 @@ module.exports = planetsRouter;
 
 -   `server/src/models/planets.model.js`
 ```
-const planets = [];
+const  { parse } = require('csv-parse');
+const fs = require('fs');
 
-module.exports = planets;
+const habitablePlanets = [];
+
+function isHabitablePlanet(planet) {
+    return planet['koi_disposition'] === 'CONFIRMED'
+        && planet['koi_insol'] > 0.36 && planet['koi_insol'] < 1.11
+        && planet['koi_prad'] < 1.6;
+  }
+
+fs.createReadStream('kepler_data.csv')
+    .pipe(parse({
+        comment: '#',
+        columns: true
+    }))
+    .on('data', (data) => {
+        if (isHabitablePlanet(data)){
+            habitablePlanets.push(data);
+        }
+    })
+    .on('error', (err) => {
+        console.log(err);
+    })
+    .on('end', () => {
+        console.log(habitablePlanets.map((planet) => {
+            return planet['kepler_name'];
+          }));
+        console.log(`${habitablePlanets.length} habitable planets found!`);
+    });
+
+
+module.exports = {
+    planets: habitablePlanets,
+};
 ```
 
 -  under server folder run Server `npm run watch`
@@ -168,4 +239,4 @@ Listening on port 8000...
 
 ---
 
-[Previous](./110_CORS-Middleware.md) | [Next](./112_The-Planets-Model.md)
+[Previous](./111_Models-vs-Controllers-vs-Routers.md) | [Next]()
