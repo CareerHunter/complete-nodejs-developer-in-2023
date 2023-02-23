@@ -26,5 +26,5 @@ https://github.com/odziem/nasa-project
 
 ---
 
-[Previous](./113_Loading-Data-On-Startup.md) | [Next]()
+[Previous](./113_Loading-Data-On-Startup.md) | [Next](./115_Automating-Full-Stack-Applications-With-NPM.md)
 

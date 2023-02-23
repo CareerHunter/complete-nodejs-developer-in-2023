@@ -180,8 +180,9 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [112. The Planets Model](contents/112_The-Planets-Model.md)  
   -   [113. Loading Data On Startup](contents/113_Loading-Data-On-Startup.md)  
   -   [114. Common Issues With NPM Scripts](contents/114_Common-Issues-With-NPM-Scripts.md)  
-  -   [115. ](contents)  
+  -   [115. Automating Full Stack Applications With NPM](contents/115_Automating-Full-Stack-Applications-With-NPM.md)  
   -   [116. ](contents)  
+  -   [117. ](contents)  
 </details>
 
 <details>

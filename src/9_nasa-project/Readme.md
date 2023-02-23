@@ -1,6 +1,29 @@
 #   Section 9: NASA Project
 
+## Project Root folder
+
+- install package.json and create .gitignore file 
+  ```
+  npm init -y 
+  npx gitignore node
+  ````
+- add script on `package.json`
+
+```
+  "scripts": {
+    "install-server": "npm install --prefix server",
+    "insatll-client": "npm install --prefix client",
+    "install": "npm run install-server && npm run insatll-client",
+    "server": "npm run watch --prefix server",
+    "client": "npm start --prefix client",
+    "watch": "npm run server & npm run client",
+    "test": "npm run test --prefix server && npm run test --prefix client"
+  },
+```
+
 ## NASA Dashboard Front End Setup
+
+**under client folder**
 
   - copy unzipped files into `client` folder
 
@@ -26,6 +49,8 @@
 </details>
 
 ## NASA API Server Setup 
+
+**under server folder**
 
 - install package.json and create .gitignore file 
   ```
