@@ -9,7 +9,7 @@
 https://github.com/odziem/nasa-project
 
 <details>
-  <summary> 120. GET /launches: server </summary>
+  <summary> 120. GET /launches: Data Access Layer </summary>
 
 -   `server/src/models/launches.model.js` 
 ```
@@ -64,12 +64,102 @@ launchesRouter.get('/launches', httpGetAllLaunches);
 
 module.exports = launchesRouter;
 ```
+</details>
 
-- under project root run `npm run server`
+<details>
+  <summary> 120. GET /planets: Data Access Layer </summary>
+
+-   `server/src/models/planets.model.js` 
+```
+const  { parse } = require('csv-parse');
+const fs = require('fs');
+const path = require('path');
+
+const habitablePlanets = [];
+
+function isHabitablePlanet(planet) {
+    return planet['koi_disposition'] === 'CONFIRMED'
+        && planet['koi_insol'] > 0.36 && planet['koi_insol'] < 1.11
+        && planet['koi_prad'] < 1.6;
+  }
+
+  
+function loadPlanetsData(){
+    return new Promise((resolve, reject) => {
+        fs.createReadStream(path.join(__dirname, '..', '..', 'data', 'kepler_data.csv'))
+            .pipe(parse({
+                comment: '#',
+                columns: true
+            }))
+            .on('data', (data) => {
+                if (isHabitablePlanet(data)){
+                    habitablePlanets.push(data);
+                }
+            })
+            .on('error', (err) => {
+                console.log(err);
+                reject(err);
+            })
+            .on('end', () => {                
+                console.log(`${habitablePlanets.length} habitable planets found!`);
+                resolve();
+            });
+    });
+}
+
+function getAllPlanets () {
+    return habitablePlanets;
+};
+
+module.exports = {
+    loadPlanetsData,
+    getAllPlanets,
+};
+```
+
+-   `server/src/routes/planets/planets.controller.js`
+```
+const { getAllPlanets } = require('../../models/planets.model')
+
+function httpGetAllPlanets(req, res) {
+    // res.status(200).json(planets); 
+    return res.status(200).json(getAllPlanets);
+};
+
+module.exports = {
+    httpGetAllPlanets,
+}
+```
+
+-   `server/src/routes/planets/planets.router.js`
+```
+const express = require('express');
+
+const {
+    httpGetAllPlanets,
+} = require('./planets.controller');
+
+const planetsRouter = express.Router();
+
+planetsRouter.get('/planets', httpGetAllPlanets);
+
+module.exports = planetsRouter;
+```
+</details>
+
+
+<details>
+  <summary> Project deployment result - capture </summary>
+
+- under project root run `npm run deploy` 
+
+- goto `http://localhost:8000/hsitory` 
 
 <p align="center" >
-    <img src="../imags/120_GET_launches.png" width="100%" > 
+    <img src="../imags/120_GET_launches_5.png" width="100%" > 
 </p> 
+
+---
 
 - goto postman `GET http://localhost:8000/launches`
 
@@ -84,9 +174,6 @@ module.exports = launchesRouter;
 </p> 
 
 </details>
-
-
-
 
 <details>
   <summary> Section 9: NASA Project </summary>
