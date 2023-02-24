@@ -17,9 +17,18 @@
     "server": "npm run watch --prefix server",
     "client": "npm start --prefix client",
     "watch": "npm run server & npm run client",
+    "deploy": "npm run build --prefix client && npm start --prefix server",
     "test": "npm run test --prefix server && npm run test --prefix client"
   },
 ```
+
+- [deployment](../../contents/116_Serving-React.js-Front-End-In-Production.md) `npm run deploy`
+
+- install morgan `npm install morgan`
+
+- under project root run `npm run watch`
+
+- or under project root run `npm run deploy`
 
 ## NASA Dashboard Front End Setup
 

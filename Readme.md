@@ -183,8 +183,10 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [115. Automating Full Stack Applications With NPM](contents/115_Automating-Full-Stack-Applications-With-NPM.md)  
   -   [116. Serving React.js Front End In Production](contents/116_Serving-React.js-Front-End-In-Production.md)  
   -   [117. Setting BUILD_PATH On Windows](contents/117_Setting-BUILD_PATH-On-Windows.md)  
-  -   [118. ](contents)  
-  -   [119. ](contents)  
+  -   [118. Logging Requests With Morgan](contents/118_Logging-Requests-With-Morgan.md)  
+  -   [119. The Launches Model](contents/119_The-Launches-Model.md)  
+  -   [120. ](contents)  
+  -   [121. ](contents)  
 </details>
 
 <details>
