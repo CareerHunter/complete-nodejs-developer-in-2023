@@ -1,11 +1,48 @@
-# 124. POST /launches: Creating Launches 2
-
+# 125. POST /launches: Validation For POST Requests
 
 https://github.com/odziem/nasa-project
 
 
+-   `server/src/routes/launches/launches.controller.js`
+```
+const { 
+    getAllLaunches, 
+    addNewLaunch, 
+} = require('../../models/launches.model');
+
+function httpGetAllLaunches(req, res) {
+    return res.status(200).json(getAllLaunches());
+}
+
+function httpAddNewLaunch (req, res) {
+    const launch = req.body;
+
+    if ( !launch.mission || !launch.roket || !launch.launchDate 
+        || launch.destination ) {
+            return res.status(400).json({
+                error: 'Missing required launch property'
+            });    
+        };
+
+    launch.launchDate = new Date(launch.launchDate);
+    if (isNaN(launch.launchDate.toString)){
+        return res.status(400).json({
+            error: 'Invalid launch Date',
+        });   
+    };
+
+    addNewLaunch(launch);
+    return res.status(201).json(launch);
+}
+
+module.exports = {
+    httpGetAllLaunches,
+    httpAddNewLaunch,
+}
+```
+
 <details>
-  <summary> 124. POST /launches: Creating Launches 2 </summary>
+  <summary> 125. POST /launches: Validation For POST Requests </summary>
 
 -   `server/src/models/launches.model.js` 
 ```
@@ -63,7 +100,19 @@ function httpGetAllLaunches(req, res) {
 function httpAddNewLaunch (req, res) {
     const launch = req.body;
 
+    if ( !launch.mission || !launch.roket || !launch.launchDate 
+        || launch.destination ) {
+            return res.status(400).json({
+                error: 'Missing required launch property'
+            });    
+        };
+
     launch.launchDate = new Date(launch.launchDate);
+    if (isNaN(launch.launchDate.toString)){
+        return res.status(400).json({
+            error: 'Invalid launch Date',
+        });   
+    };
 
     addNewLaunch(launch);
     return res.status(201).json(launch);
@@ -135,35 +184,7 @@ app.get('/*', (req, res) => {
 module.exports = app;
 ```
 
-- goto postman `GET http://localhost:8000/launches`
-
-<p align="center" >
-    <img src="../imags/120_GET_launches_2.png" width="100%" > 
-</p> 
-
-- goto postman `GET http://localhost:8000/planets`
-
-<p align="center" >
-    <img src="../imags/120_GET_launches_3.png" width="100%" > 
-</p> 
-
-- postman `Post http://localhost:8000/launches`
-    -   Body --> raw --> JSON
-```
-{
-    "mission": "ZTM155",
-    "rocket": "ZTM Experimental IS1",
-    "destination": "Kepler-186 f",
-    "launchDate": "January 17, 2030"
-}
-```
-
-<p align="center" >
-    <img src="../imags/124_POST_launches_Creating-Launches-2.png" width="100%" > 
-    <img src="../imags/124_POST_launches_Creating-Launches-2_2.png" width="100%" > 
-</p> 
-
-**issues** with `launchDate` 
+**issues 1** with `launchDate` 
 
 - postman `Post http://localhost:8000/launches`
     -   Body --> raw --> JSON
@@ -178,7 +199,25 @@ module.exports = app;
 
 <p align="center" >
     <img src="../imags/124_POST_launches_Creating-Launches-2_4.png" width="100%" > 
-    <img src="../imags/124_POST_launches_Creating-Launches-2_3.png" width="100%" > 
+    <img src="../imags/125_POST_launches_Validation-For-POST-Requests.png" width="100%" > 
+</p> 
+
+**issues 2** with `launchDate` missing
+
+- postman `Post http://localhost:8000/launches`
+    -   Body --> raw --> JSON
+```
+{
+    "mission": "ZTM155",
+    "rocket": "ZTM Experimental IS1",
+    "destination": "Kepler-186 f"
+
+}
+```
+
+<p align="center" >    
+    <img src="../imags/125_POST_launches_Validation-For-POST-Requests_2.png" width="100%" > 
+    <img src="../imags/125_POST_launches_Validation-For-POST-Requests_3.png" width="100%" > 
 </p> 
 
 
