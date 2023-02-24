@@ -1,4 +1,4 @@
-# 120. GET /launches
+# 121. Serving Applications With Client Side Routing
 
 https://github.com/odziem/nasa-project
 
@@ -113,10 +113,25 @@ module.exports = {
 
 - under project root run `npm run deploy`
 
-- goto `http://localhost:8000/`
+- goto `http://localhost:8000/hsitory`
 
 <p align="center" >
     <img src="../imags/120_GET_launches_4.png" width="100%" > 
+</p> 
+
+
+-   `server/src/app.js`  
+```
+// ...
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'public', 'index.html'))
+});
+// ...
+```
+- goto `http://localhost:8000/hsitory` 
+
+<p align="center" >
+    <img src="../imags/120_GET_launches_5.png" width="100%" > 
 </p> 
 
 </details>
@@ -132,4 +147,4 @@ module.exports = {
 
 ---
 
-[Previous](./119_The-Launches-Model.md) | [Next](./121_Serving-Applications-With-Client-Side-Routing.md)
+[Previous](./120_GET_launches.md) | [Next]()
