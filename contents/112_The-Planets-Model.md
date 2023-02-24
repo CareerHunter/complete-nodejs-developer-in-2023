@@ -1,52 +1,16 @@
-# 110. CORS Middleware
+# 112. The Planets Model
 
--   [CORS Middleware Package](https://www.npmjs.com/package/cors)
+-   [kepler_data.csv](https://beatlesm.s3.us-west-1.amazonaws.com/Complete-NodeJS-Developer-in-2023/kepler_data.csv)
 
-<p align="center" >
-    <img src="../imags/110_CORS-Middleware.png" width="45%" >
-    <img src="../imags/110_CORS-Middleware_2.png" width="45%" >
-</p> 
+-   [planets_project_code.js](https://beatlesm.s3.us-west-1.amazonaws.com/Complete-NodeJS-Developer-in-2023/planets_project_code.js)
 
----
-
-- [78. Cross Origin Resource Sharing (CORS)](./78_Cross-Origin-Resource-Sharing-(CORS).md)
-
----
-
-<p align="center" >
-    <img src="../imags/78_Cross-Origin-Resource-Sharing-(CORS).png" width="45%" >
-    <img src="../imags/78_Cross-Origin-Resource-Sharing-(CORS)_1.png" width="45%" >
-</p>
-
----
-
-- install CORS on **server** `npm i cors`
-```
-npm i cors
-```
-
-- update `app.js`
-
-```
-const express = require('express');
-const cors = require('cors');
-
-const planetsRouter = require('./routes/planets/planets.router');
-
-const app = express();
-
-app.use(cors({
-    origin: 'http://localhost:3000',
-}));
-app.use(express.json());
-app.use(planetsRouter);
-
-module.exports = app;
-```
-
----
+-   [Section 6: Node.js File I/O - Planets Project](../../contents/Section-6_Node.js-File-IO-Planets-Project.md) 
 
 https://github.com/odziem/nasa-project
+
+-   `server/src/models/planets.model.js`
+
+-   `server/src/data/kepler_data.csv`
 
 <details>
   <summary> NASA API Server Setup </summary>
@@ -171,9 +135,41 @@ module.exports = planetsRouter;
 
 -   `server/src/models/planets.model.js`
 ```
-const planets = [];
+const  { parse } = require('csv-parse');
+const fs = require('fs');
 
-module.exports = planets;
+const habitablePlanets = [];
+
+function isHabitablePlanet(planet) {
+    return planet['koi_disposition'] === 'CONFIRMED'
+        && planet['koi_insol'] > 0.36 && planet['koi_insol'] < 1.11
+        && planet['koi_prad'] < 1.6;
+  }
+
+fs.createReadStream('kepler_data.csv')
+    .pipe(parse({
+        comment: '#',
+        columns: true
+    }))
+    .on('data', (data) => {
+        if (isHabitablePlanet(data)){
+            habitablePlanets.push(data);
+        }
+    })
+    .on('error', (err) => {
+        console.log(err);
+    })
+    .on('end', () => {
+        console.log(habitablePlanets.map((planet) => {
+            return planet['kepler_name'];
+          }));
+        console.log(`${habitablePlanets.length} habitable planets found!`);
+    });
+
+
+module.exports = {
+    planets: habitablePlanets,
+};
 ```
 
 -  under server folder run Server `npm run watch`
@@ -206,4 +202,4 @@ Listening on port 8000...
 
 ---
 
-[Previous](./109_GET-planets.md) | [Next](./111_Models-vs-Controllers-vs-Routers.md)
+[Previous](./111_Models-vs-Controllers-vs-Routers.md) | [Next](./113_Loading-Data-On-Startup.md)
