@@ -1,48 +1,37 @@
-# 125. POST /launches: Validation For POST Requests
+# 126. Connecting POST /launches With Front End Dashboard
 
 https://github.com/odziem/nasa-project
 
-
--   `server/src/routes/launches/launches.controller.js`
+-   `client/src/hooks/request.js`
 ```
-const { 
-    getAllLaunches, 
-    addNewLaunch, 
-} = require('../../models/launches.model');
 
-function httpGetAllLaunches(req, res) {
-    return res.status(200).json(getAllLaunches());
-}
-
-function httpAddNewLaunch (req, res) {
-    const launch = req.body;
-
-    if ( !launch.mission || !launch.roket || !launch.launchDate 
-        || launch.destination ) {
-            return res.status(400).json({
-                error: 'Missing required launch property'
-            });    
-        };
-
-    launch.launchDate = new Date(launch.launchDate);
-    if (isNaN(launch.launchDate.toString)){
-        return res.status(400).json({
-            error: 'Invalid launch Date',
-        });   
-    };
-
-    addNewLaunch(launch);
-    return res.status(201).json(launch);
-}
-
-module.exports = {
-    httpGetAllLaunches,
-    httpAddNewLaunch,
-}
-```
+```  
 
 <details>
-  <summary> 125. POST /launches: Validation For POST Requests </summary>
+  <summary> 126. Connecting POST /launches With Front End Dashboard </summary>
+
+**client**
+
+-   `client/src/hooks/request.js`
+```
+
+```  
+
+-   `client/src/hooks/useLaunches.js`
+```
+// ...
+
+setPendingLaunch(true);
+
+//  ...
+
+const success = response.ok;
+
+//  ...
+
+```  
+
+**server**
 
 -   `server/src/models/launches.model.js` 
 ```
@@ -183,6 +172,10 @@ app.get('/*', (req, res) => {
 
 module.exports = app;
 ```
+</details>
+
+<details>
+  <summary> result - capture </summary>
 
 **issues 1** with `launchDate` 
 
@@ -234,4 +227,4 @@ module.exports = app;
 
 ---
 
-[Previous](./124_POST_launches_Creating-Launches-2.md) | [Next](./126_Connecting-POST_launches-With-Front-End-Dashboard.md)
+[Previous](./125_POST_launches_Validation-For-POST-Requests.md) | [Next]()
