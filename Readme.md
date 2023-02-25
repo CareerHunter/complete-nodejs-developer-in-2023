@@ -202,7 +202,20 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   <summary> Section 10: Testing APIs </summary>
 
   [Section 10: Testing APIs](contents)
-  -   [131. ](contents)    
+  -   [131. Testing In Node](contents/131_Testing-In-Node.md)    
+  -   [132. Testing APIs With Jest](contents/132_Testing-APIs-With-Jest.md)    
+  -   [133. Testing API Endpoints With Supertest: GET](contents/133_Testing-API-Endpoints-With-Supertest_GET.md)    
+  -   [134. Testing API Endpoints With Supertest: POST](contents/134_Testing-API-Endpoints-With-Supertes_POST.md)    
+  -   [135. Testing API Endpoints With Supertest: Error Cases](contents/135_Testing-API-Endpoints-With-Supertest_Error-Cases.md)    
+</details>
+
+<details>
+  <summary> Section 11: Improving Node Performance </summary>
+
+  [Section 11: Improving Node Performance](contents)
+  -   [136. ](contents)    
+  -   [137. ](contents)    
+  -   [138. ](contents)    
 </details>
 
 
