@@ -82,9 +82,15 @@
 -  `http://localhost:3000/`
 
 <p align="center" >
-    <img src="../../imags/100_Layouts-and-Separation-of-Concerns.png" width="90%" >
-    <img src="../../imags/100_Layouts-and-Separation-of-Concerns_2.png" width="90%" >
+    <img src="../../../imags/100_Layouts-and-Separation-of-Concerns.png" width="90%" >
+    <img src="../../../imags/100_Layouts-and-Separation-of-Concerns_2.png" width="90%" >
 </p> 
+
+## NASA API Test
+
+- install jest `npm install jest --save-dev`
+
+
 
 </details>
 
