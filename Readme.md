@@ -202,7 +202,20 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   <summary> Section 10: Testing APIs </summary>
 
   [Section 10: Testing APIs](contents)
-  -   [131. ](contents)    
+  -   [131. Testing In Node](contents/131_Testing-In-Node.md)    
+  -   [132. ](contents)    
+  -   [133. ](contents)    
+  -   [134. ](contents)    
+  -   [135. ](contents)    
+</details>
+
+<details>
+  <summary> Section 11: Improving Node Performance </summary>
+
+  [Section 11: Improving Node Performance](contents)
+  -   [136. ](contents)    
+  -   [137. ](contents)    
+  -   [138. ](contents)    
 </details>
 
 

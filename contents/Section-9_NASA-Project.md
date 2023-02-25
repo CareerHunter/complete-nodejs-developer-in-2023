@@ -42,5 +42,5 @@ https://github.com/odziem/express-project
 
 ---
 
-[Section-8](./Section-8_First-Express.js-API.md) | [Section-10](./se)
+[Section-8](./Section-8_First-Express.js-API.md) | [Section-10](./Section-10_Testing-APIs.md)
 
