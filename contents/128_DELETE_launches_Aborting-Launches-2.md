@@ -1,11 +1,9 @@
-# 126. Connecting POST /launches With Front End Dashboard
+# 128. DELETE /launches: Aborting Launches 2
 
 https://github.com/odziem/nasa-project
 
-
-
 <details>
-  <summary> 126. Connecting POST /launches With Front End Dashboard </summary>
+  <summary> 128. DELETE /launches: Aborting Launches 2 </summary>
 
 **client**
 
@@ -45,9 +43,18 @@ async function httpSubmitLaunch(launch) {
   }
 }
 
+// Delete launch with given ID.
 async function httpAbortLaunch(id) {
-  // TODO: Once API is ready.
-  // Delete launch with given ID.
+  try {
+    return await fetch(`${API_URL}/launches/${id}`, {
+      method: "delete",
+    });    
+  } catch (err){
+    console.log(err);
+    return {
+      ok: false,
+    }
+  }
 }
 
 export {
@@ -112,7 +119,7 @@ function useLaunches(onSuccessSound, onAbortSound, onFailureSound) {
     const response = await httpAbortLaunch(id);
 
     // TODO: Set success based on response.
-    const success = false;
+    const success = response.ok;
     if (success) {
       getLaunches();
       onAbortSound();
@@ -137,7 +144,9 @@ export default useLaunches;
 -   `server/src/models/launches.model.js` 
 ```
 const launches = new Map();
+
 let latestFlightNumber = 100;
+
 const launch = {
     flightNumber: 100,
     mission: 'Kepler Exploration X',
@@ -148,10 +157,17 @@ const launch = {
     upcoming: true,
     success: true
 };
+
 launches.set(launch.flightNumber, launch);
+
+function existsLaunchWithId(launchId){
+    return launches.has(launchId)
+}
+
 function getAllLaunches () {
     return Array.from(launches.values());
 }
+
 function addNewLaunch(launch) {
     latestFlightNumber++;
     launches.set(
@@ -161,12 +177,24 @@ function addNewLaunch(launch) {
             upcoming: true,
             customer: ['Zero to Mastery', 'NASA'],
             flightNumber: latestFlightNumber,
-    }));
+        })
+    );
 }
+
+function abortLaunchById (launchId) {
+    const aborted = launches.get(launchId);
+    aborted.upcoming = false;
+    aborted.sucess = false;
+    return aborted;    
+}
+
 module.exports = {
+    existsLaunchWithId,
     getAllLaunches,
     addNewLaunch,
+    abortLaunchById,
 }
+
 ```
 
 -   `server/src/routes/launches/launches.controller.js`
@@ -174,6 +202,8 @@ module.exports = {
 const { 
     getAllLaunches, 
     addNewLaunch, 
+    existsLaunchWithId,
+    abortLaunchById,
 } = require('../../models/launches.model');
 
 function httpGetAllLaunches(req, res) {
@@ -183,27 +213,41 @@ function httpGetAllLaunches(req, res) {
 function httpAddNewLaunch (req, res) {
     const launch = req.body;
 
-    if ( !launch.mission || !launch.roket || !launch.launchDate 
-        || launch.target ) {
-            return res.status(400).json({
-                error: 'Missing required launch property'
-            });    
-        };
-
-    launch.launchDate = new Date(launch.launchDate);
-    if (isNaN(launch.launchDate.toString)){
+    if (!launch.mission || !launch.rocket || !launch.launchDate
+      || !launch.target) {
         return res.status(400).json({
-            error: 'Invalid launch Date',
-        });   
-    };
+          error: 'Missing required launch property',
+        });
+      }
+  
+    launch.launchDate = new Date(launch.launchDate);
+    if (isNaN(launch.launchDate)) {
+      return res.status(400).json({
+        error: 'Invalid launch date',
+      });
+    }
 
     addNewLaunch(launch);
     return res.status(201).json(launch);
 }
 
+function httpAbortLaunch (req, res) {
+  const launchId = Number(req.params.id);
+
+  if (!existsLaunchWithId(launchId)){
+    return res.status(404).json({
+      error: 'Lauch not found',
+    });
+  }
+
+  const aborted = abortLaunchById(launchId);
+  return res.status(200).json(aborted);
+}
+
 module.exports = {
     httpGetAllLaunches,
     httpAddNewLaunch,
+    httpAbortLaunch,
 }
 ```
 
@@ -213,15 +257,19 @@ const express = require('express');
 const {
     httpGetAllLaunches,
     httpAddNewLaunch,
+    httpAbortLaunch,
 } = require('./launches.controller');
 
 const launchesRouter = express.Router();
 
 launchesRouter.get('/', httpGetAllLaunches);
 launchesRouter.post('/', httpAddNewLaunch);
+launchesRouter.delete('/:id', httpAbortLaunch);
 
 module.exports = launchesRouter;
 ```
+
+**following unchanged **
 
 -   `server/src/routes/planets/planets.router.js`
 ```
@@ -271,12 +319,58 @@ module.exports = app;
 <details>
   <summary> result - capture </summary>
 
--   goto `http://localhost:8000` --> `http://localhost:8000/upcoming` --> `http://localhost:8000/launch` --> `http://localhost:8000/upcoming`
+- `run npm run deply`
+
+- goto postman `GET http://localhost:8000/launches`
 
 <p align="center" >
-    <img src="../imags/126_Connecting-POST_launches-With-Front-End-Dashboard.png" width="100%" > 
-    <img src="../imags/126_Connecting-POST_launches-With-Front-End-Dashboard_2.png" width="100%" > 
-    <img src="../imags/126_Connecting-POST_launches-With-Front-End-Dashboard_3.png" width="100%" > 
+    <img src="../imags/120_GET_launches_2.png" width="90%" > 
+</p> 
+
+- postman `Post http://localhost:8000/launches`
+    -   Body --> raw --> JSON
+```
+{
+    "mission": "ZTM155",
+    "rocket": "ZTM Experimental IS1",
+    "target": "Kepler-186 f",
+    "launchDate": "July 1, 2028"
+}
+```
+- goto postman `GET http://localhost:8000/launches`
+
+<p align="center" >
+    <img src="../imags/128_DELETE_launches_Aborting-Launches-2.png" width="45%" > 
+    <img src="../imags/128_DELETE_launches_Aborting-Launches-2_2.png" width="45%" > 
+</p> 
+
+- goto postman `DELETE http://localhost:8000/launches/100` then `GET http://localhost:8000/launches`
+
+<p align="center" >
+    <img src="../imags/128_DELETE_launches_Aborting-Launches-2_3.png" width="45%" > 
+    <img src="../imags/128_DELETE_launches_Aborting-Launches-2_4.png" width="45%" > 
+</p> 
+
+- goto postman `DELETE http://localhost:8000/launches/188` 
+
+<p align="center" >
+    <img src="../imags/128_DELETE_launches_Aborting-Launches-2_5.png" width="90%" > 
+
+- goto `http://localhost:8000/upcoming` click `x` to remove the launch
+- then goto `http://localhost:8000/launch` add new launch then check `http://localhost:8000/upcoming`
+
+<p align="center" >
+    <img src="../imags/128_DELETE_launches_Aborting-Launches-2_6.png" width="45%" > 
+    <img src="../imags/128_DELETE_launches_Aborting-Launches-2_7.png" width="45%" > 
+    <img src="../imags/128_DELETE_launches_Aborting-Launches-2_8.png" width="45%" > 
+    <img src="../imags/128_DELETE_launches_Aborting-Launches-2_9.png" width="45%" > 
+</p> 
+
+- goto `http://localhost:8000/history` 
+
+<p align="center" >
+    <img src="../imags/128_DELETE_launches_Aborting-Launches-2_10.png" width="90%" > 
+
 </p> 
 
 </details>  
@@ -292,4 +386,4 @@ module.exports = app;
 
 ---
 
-[Previous](./125_POST_launches_Validation-For-POST-Requests.md) | [Next](./127_DELETE_launches_Aborting-Launches-1.md)
+[Previous](./127_DELETE_launches_Aborting-Launches-1.md) | [Next](./129_Updating-Our-Architecture-Diagram.md)

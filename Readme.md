@@ -192,10 +192,10 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [124. POST /launches: Creating Launches 2](contents/124_POST_launches_Creating-Launches-2.md)  
   -   [125. POST /launches: Validation For POST Requests](contents/125_POST_launches_Validation-For-POST-Requests.md)  
   -   [126. Connecting POST /launches With Front End Dashboard](contents/126_Connecting-POST_launches-With-Front-End-Dashboard.md)  
-  -   [127. ](contents)  
-  -   [128. ](contents)  
-  -   [129. ](contents)  
-  -   [130. ](contents)  
+  -   [127. DELETE /launches: Aborting Launches 1](contents/127_DELETE_launches_Aborting-Launches-1.md)  
+  -   [128. DELETE /launches: Aborting Launches 2](contents/128_DELETE_launches_Aborting-Launches-2.md)  
+  -   [129. Updating Our Architecture Diagram](contents/129_Updating-Our-Architecture-Diagram.md)  
+  -   [130. Exercise: Imposter Syndrome](contents/130_Exercise_Imposter-Syndrome.md)  
 </details>
 
 <details>
