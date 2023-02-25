@@ -1,9 +1,9 @@
-# 127. DELETE /launches: Aborting Launches 1
+# 128. DELETE /launches: Aborting Launches 2
 
 https://github.com/odziem/nasa-project
 
 <details>
-  <summary> 127. DELETE /launches: Aborting Launches 1 </summary>
+  <summary> 128. DELETE /launches: Aborting Launches 2 </summary>
 
 **client**
 
@@ -182,15 +182,19 @@ function addNewLaunch(launch) {
 }
 
 function abortLaunchById (launchId) {
-
+    const aborted = launches.get(launchId);
+    aborted.upcoming = false;
+    aborted.sucess = false;
+    return aborted;    
 }
 
 module.exports = {
+    existsLaunchWithId,
     getAllLaunches,
     addNewLaunch,
-    existsLaunchWithId,
     abortLaunchById,
 }
+
 ```
 
 -   `server/src/routes/launches/launches.controller.js`
@@ -199,6 +203,7 @@ const {
     getAllLaunches, 
     addNewLaunch, 
     existsLaunchWithId,
+    abortLaunchById,
 } = require('../../models/launches.model');
 
 function httpGetAllLaunches(req, res) {
@@ -227,7 +232,7 @@ function httpAddNewLaunch (req, res) {
 }
 
 function httpAbortLaunch (req, res) {
-  const launchId = req.params.id;
+  const launchId = Number(req.params.id);
 
   if (!existsLaunchWithId(launchId)){
     return res.status(404).json({
@@ -235,20 +240,20 @@ function httpAbortLaunch (req, res) {
     });
   }
 
-  //  if launch does exist
+  const aborted = abortLaunchById(launchId);
   return res.status(200).json(aborted);
 }
 
 module.exports = {
     httpGetAllLaunches,
     httpAddNewLaunch,
+    httpAbortLaunch,
 }
 ```
 
 -   `server/src/routes/launches/launches.router.js`
 ```
 const express = require('express');
-const { httpAbortLaunch } = require('../../../../client/src/hooks/requests');
 const {
     httpGetAllLaunches,
     httpAddNewLaunch,
@@ -263,6 +268,8 @@ launchesRouter.delete('/:id', httpAbortLaunch);
 
 module.exports = launchesRouter;
 ```
+
+**following unchanged **
 
 -   `server/src/routes/planets/planets.router.js`
 ```
@@ -310,6 +317,65 @@ module.exports = app;
 </details>
 
 <details>
+  <summary> result - capture </summary>
+
+- `run npm run deply`
+
+- goto postman `GET http://localhost:8000/launches`
+
+<p align="center" >
+    <img src="../imags/120_GET_launches_2.png" width="90%" > 
+</p> 
+
+- postman `Post http://localhost:8000/launches`
+    -   Body --> raw --> JSON
+```
+{
+    "mission": "ZTM155",
+    "rocket": "ZTM Experimental IS1",
+    "target": "Kepler-186 f",
+    "launchDate": "July 1, 2028"
+}
+```
+- goto postman `GET http://localhost:8000/launches`
+
+<p align="center" >
+    <img src="../imags/128_DELETE_launches_Aborting-Launches-2.png" width="45%" > 
+    <img src="../imags/128_DELETE_launches_Aborting-Launches-2_2.png" width="45%" > 
+</p> 
+
+- goto postman `DELETE http://localhost:8000/launches/100` then `GET http://localhost:8000/launches`
+
+<p align="center" >
+    <img src="../imags/128_DELETE_launches_Aborting-Launches-2_3.png" width="45%" > 
+    <img src="../imags/128_DELETE_launches_Aborting-Launches-2_4.png" width="45%" > 
+</p> 
+
+- goto postman `DELETE http://localhost:8000/launches/188` 
+
+<p align="center" >
+    <img src="../imags/128_DELETE_launches_Aborting-Launches-2_5.png" width="90%" > 
+
+- goto `http://localhost:8000/upcoming` click `x` to remove the launch
+- then goto `http://localhost:8000/launch` add new launch then check `http://localhost:8000/upcoming`
+
+<p align="center" >
+    <img src="../imags/128_DELETE_launches_Aborting-Launches-2_6.png" width="45%" > 
+    <img src="../imags/128_DELETE_launches_Aborting-Launches-2_7.png" width="45%" > 
+    <img src="../imags/128_DELETE_launches_Aborting-Launches-2_8.png" width="45%" > 
+    <img src="../imags/128_DELETE_launches_Aborting-Launches-2_9.png" width="45%" > 
+</p> 
+
+- goto `http://localhost:8000/history` 
+
+<p align="center" >
+    <img src="../imags/128_DELETE_launches_Aborting-Launches-2_10.png" width="90%" > 
+
+</p> 
+
+</details>  
+
+<details>
   <summary> Section 9: NASA Project </summary>
 
   - [Codebase: nasa-project](../src/9_nasa-project)
@@ -320,4 +386,4 @@ module.exports = app;
 
 ---
 
-[Previous](./126_Connecting-POST_launches-With-Front-End-Dashboard.md) | [Next](./128_DELETE_launches_Aborting-Launches-2.md)
+[Previous](./127_DELETE_launches_Aborting-Launches-1.md) | [Next]()
