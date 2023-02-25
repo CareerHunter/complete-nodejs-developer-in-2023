@@ -1,3 +1,13 @@
+# 142. Clustering In Action
+
+<p align="center" >
+    <img src="../imags/141_The-Node-Cluster-Module.png" width="45%" > 
+</p> 
+
+https://github.com/odziem/performance-example
+
+- server.js
+```
 const express = require('express');
 const cluster = require('cluster');
 const { cpSync } = require('fs');
@@ -32,3 +42,30 @@ if (cluster.isMaster) {
     console.log('Worker process started.');
     app.listen(3000);
 }
+
+```
+
+<details>
+  <summary> result - capture </summary>
+
+- run `npm run start`
+
+<p align="center" >
+    <img src="../imags/142_Clustering-In-Action.png" width="90%" > 
+    <img src="../imags/142_Clustering-In-Action_2.png" width="90%" > 
+    <img src="../imags/142_Clustering-In-Action_3.png" width="90%" > 
+</p> 
+
+</details>  
+
+
+<details>
+  <summary> Section 11: Improving Node Performance </summary>
+
+  - [Codebase: performance-example](../src/11_performance-example/)
+
+</details>
+
+---
+
+[Previous](./141_The-Node-Cluster-Module.md) | [Next]()
