@@ -4,7 +4,51 @@ https://github.com/odziem/nasa-project
 
 -   `client/src/hooks/request.js`
 ```
+const API_URL = 'http://localhost:8000'
 
+// Load planets and return as JSON.
+async function httpGetPlanets() {
+  const response = await fetch(`${API_URL}/planets`);
+  return await response.json();
+}
+
+// Load launches, sort by flight number, and return as JSON.
+async function httpGetLaunches() {
+  const response = await fetch(`${API_URL}/launches`);
+  const fetchedLaunches = await response.json();
+  return fetchedLaunches.sort((a, b) => {
+    return a.flightNumber - b.flightNumber;
+  });
+}
+
+// Submit given launch data to launch system.
+async function httpSubmitLaunch(launch) {
+  try {
+    return await fetch(`${API_URL}/launches`, {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(launch),
+    });
+  } catch(err) {
+    return {
+      ok: false,
+    };
+  }
+}
+
+async function httpAbortLaunch(id) {
+  // TODO: Once API is ready.
+  // Delete launch with given ID.
+}
+
+export {
+  httpGetPlanets,
+  httpGetLaunches,
+  httpSubmitLaunch,
+  httpAbortLaunch,
+};
 ```  
 
 <details>
@@ -14,7 +58,51 @@ https://github.com/odziem/nasa-project
 
 -   `client/src/hooks/request.js`
 ```
+const API_URL = 'http://localhost:8000'
 
+// Load planets and return as JSON.
+async function httpGetPlanets() {
+  const response = await fetch(`${API_URL}/planets`);
+  return await response.json();
+}
+
+// Load launches, sort by flight number, and return as JSON.
+async function httpGetLaunches() {
+  const response = await fetch(`${API_URL}/launches`);
+  const fetchedLaunches = await response.json();
+  return fetchedLaunches.sort((a, b) => {
+    return a.flightNumber - b.flightNumber;
+  });
+}
+
+// Submit given launch data to launch system.
+async function httpSubmitLaunch(launch) {
+  try {
+    return await fetch(`${API_URL}/launches`, {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(launch),
+    });
+  } catch(err) {
+    return {
+      ok: false,
+    };
+  }
+}
+
+async function httpAbortLaunch(id) {
+  // TODO: Once API is ready.
+  // Delete launch with given ID.
+}
+
+export {
+  httpGetPlanets,
+  httpGetLaunches,
+  httpSubmitLaunch,
+  httpAbortLaunch,
+};
 ```  
 
 -   `client/src/hooks/useLaunches.js`
@@ -90,7 +178,7 @@ function httpAddNewLaunch (req, res) {
     const launch = req.body;
 
     if ( !launch.mission || !launch.roket || !launch.launchDate 
-        || launch.destination ) {
+        || launch.target ) {
             return res.status(400).json({
                 error: 'Missing required launch property'
             });    
@@ -177,42 +265,13 @@ module.exports = app;
 <details>
   <summary> result - capture </summary>
 
-**issues 1** with `launchDate` 
-
-- postman `Post http://localhost:8000/launches`
-    -   Body --> raw --> JSON
-```
-{
-    "mission": "ZTM155",
-    "rocket": "ZTM Experimental IS1",
-    "destination": "Kepler-186 f",
-    "launchDate": "hello"
-}
-```
+-   goto `http://localhost:8000` --> `http://localhost:8000/upcoming` --> `http://localhost:8000/launch` --> `http://localhost:8000/upcoming`
 
 <p align="center" >
-    <img src="../imags/124_POST_launches_Creating-Launches-2_4.png" width="100%" > 
-    <img src="../imags/125_POST_launches_Validation-For-POST-Requests.png" width="100%" > 
+    <img src="../imags/126_Connecting-POST_launches-With-Front-End-Dashboard.png" width="100%" > 
+    <img src="../imags/126_Connecting-POST_launches-With-Front-End-Dashboard_2.png" width="100%" > 
+    <img src="../imags/126_Connecting-POST_launches-With-Front-End-Dashboard_3.png" width="100%" > 
 </p> 
-
-**issues 2** with `launchDate` missing
-
-- postman `Post http://localhost:8000/launches`
-    -   Body --> raw --> JSON
-```
-{
-    "mission": "ZTM155",
-    "rocket": "ZTM Experimental IS1",
-    "destination": "Kepler-186 f"
-
-}
-```
-
-<p align="center" >    
-    <img src="../imags/125_POST_launches_Validation-For-POST-Requests_2.png" width="100%" > 
-    <img src="../imags/125_POST_launches_Validation-For-POST-Requests_3.png" width="100%" > 
-</p> 
-
 
 </details>  
 
