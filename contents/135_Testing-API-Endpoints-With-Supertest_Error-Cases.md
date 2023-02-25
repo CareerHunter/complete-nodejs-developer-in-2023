@@ -1,5 +1,4 @@
-# 134. Testing API Endpoints With Supertest: POST
-
+# 135. Testing API Endpoints With Supertest: Error Cases
 
 https://github.com/odziem/nasa-project
 
@@ -32,6 +31,13 @@ describe ('Test POST /launches', () => {
         target: 'Kepler 186 f',  
     };
 
+    const launchDateWithInvalidDate = {
+        mission: 'USS Enterprise',
+        rocket: 'NCC 1701-D',
+        target: 'Kepler 186 f',
+        launchDate: 'zoot',
+    }
+
     test('[2] It should respond with 201 created', async () => {
         const response = await request(app)
             .post('/launches')
@@ -46,9 +52,31 @@ describe ('Test POST /launches', () => {
         expect(response.body).toMatchObject (launchDataWithoutDate);
     });
     
-    test.todo('[3] It should catch missing required properties');
-    test.todo('[4] It should catch invalid dates');
+    test('[3] It should catch missing required properties', async () => {
+        const response = await request(app)
+            .post('/launches')
+            .send(launchDataWithoutDate)
+            .expect('Content-Type', /json/)
+            .expect(400);
+
+        expect(response.body).toStrictEqual({
+            error: 'Missing required launch property',
+        })
+    });
+
+    test('[4] It should catch invalid dates', async () => {
+        const response = await request(app)
+            .post('/launches')
+            .send(launchDateWithInvalidDate)
+            .expect('Content-Type', /json/)
+            .expect(400);
+
+        expect(response.body).toStrictEqual({
+            error: 'Invalid launch date',
+        })
+    });
 });
+
 
 ```
 
@@ -58,7 +86,7 @@ describe ('Test POST /launches', () => {
 - run test `npm test-watch`  
 
 <p align="center" >
-    <img src="../imags/134_Testing-API-Endpoints-With-Supertes_POST.png" width="90%" > 
+    <img src="../imags/135_Testing-API-Endpoints-With-Supertest_Error-Cases.png" width="90%" > 
 </p> 
 
 </details>
@@ -72,4 +100,4 @@ describe ('Test POST /launches', () => {
 
 ---
 
-[Previous](./133_Testing-API-Endpoints-With-Supertest_GET.md) | [Next](./135_Testing-API-Endpoints-With-Supertest_Error-Cases.md)
+[Previous](./134) | [Next]()
