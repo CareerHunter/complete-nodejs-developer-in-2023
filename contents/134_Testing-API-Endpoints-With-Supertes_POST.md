@@ -1,3 +1,11 @@
+# 134. Testing API Endpoints With Supertest: POST
+
+
+https://github.com/odziem/nasa-project
+
+-   `server/src/routes/launches/launches.test.js`
+
+```
 const request = require('supertest');
 const app = require('../../app')
 
@@ -42,3 +50,26 @@ describe ('Test POST /launches', () => {
     test.todo('[4] It should catch invalid dates');
 });
 
+```
+
+<details>
+  <summary> Testing APIs - result capture </summary>
+
+- run test `npm test-watch`  
+
+<p align="center" >
+    <img src="../imags/134_Testing-API-Endpoints-With-Supertes_POST.png" width="90%" > 
+</p> 
+
+</details>
+
+<details>
+  <summary> Section 10: Testing APIs </summary>
+
+  - [Codebase: testing-apis](../src/10_testing-apis/)
+
+</details>
+
+---
+
+[Previous](./133_Testing-API-Endpoints-With-Supertest_GET.md) | [Next]()

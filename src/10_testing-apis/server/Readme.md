@@ -90,6 +90,8 @@
 
 - install jest `npm install jest --save-dev`
 
+- install supertest `npm install supertest --save-dev`
+
 
 
 </details>
