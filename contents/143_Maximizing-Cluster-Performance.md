@@ -1,8 +1,5 @@
-# 142. Clustering In Action
+# 143. Maximizing Cluster Performance
 
-<p align="center" >
-    <img src="../imags/141_The-Node-Cluster-Module.png" width="45%" > 
-</p> 
 
 https://github.com/odziem/performance-example
 
@@ -10,7 +7,7 @@ https://github.com/odziem/performance-example
 ```
 const express = require('express');
 const cluster = require('cluster');
-const { cpSync } = require('fs');
+const os = require('os');
 
 const app = express();
 
@@ -36,13 +33,15 @@ app.get('/timer', (req, res) => {
 console.log('Running sever.js...')
 if (cluster.isMaster) {
     console.log('Master has been started...');
-    cluster.fork();
-    cluster.fork();
+    const NUM_WORKERS = os.cpus().length;
+    console.log('NUM_WORKERS: ', NUM_WORKERS);
+    for (let i = 0; i < NUM_WORKERS; i++){
+        cluster.fork();
+    }  
 } else {
     console.log('Worker process started.');
     app.listen(3000);
 }
-
 ```
 
 <details>
@@ -51,9 +50,14 @@ if (cluster.isMaster) {
 - run `npm run start`
 
 <p align="center" >
-    <img src="../imags/142_Clustering-In-Action.png" width="90%" > 
-    <img src="../imags/142_Clustering-In-Action_2.png" width="90%" > 
-    <img src="../imags/142_Clustering-In-Action_3.png" width="90%" > 
+    <img src="../imags/143_Maximizing-Cluster-Performance_1.png" width="90%" > 
+    <img src="../imags/143_Maximizing-Cluster-Performance.png" width="90%" > 
+    <img src="../imags/143_Maximizing-Cluster-Performance_2.png" width="90%" > 
+    <img src="../imags/143_Maximizing-Cluster-Performance_3.png" width="90%" > 
+    <img src="../imags/143_Maximizing-Cluster-Performance_4.png" width="90%" > 
+    <img src="../imags/143_Maximizing-Cluster-Performance_5.png" width="90%" > 
+    <img src="../imags/143_Maximizing-Cluster-Performance_6.png" width="90%" > 
+    <img src="../imags/143_Maximizing-Cluster-Performance_7.png" width="90%" > 
 </p> 
 
 </details>  
@@ -68,4 +72,4 @@ if (cluster.isMaster) {
 
 ---
 
-[Previous](./141_The-Node-Cluster-Module.md) | [Next](./143_Maximizing-Cluster-Performance.md)
+[Previous](./142_Clustering-In-Action.md) | [Next]()
