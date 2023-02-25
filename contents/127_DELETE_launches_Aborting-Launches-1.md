@@ -1,11 +1,9 @@
-# 126. Connecting POST /launches With Front End Dashboard
+# 127. DELETE /launches: Aborting Launches 1
 
 https://github.com/odziem/nasa-project
 
-
-
 <details>
-  <summary> 126. Connecting POST /launches With Front End Dashboard </summary>
+  <summary> 127. DELETE /launches: Aborting Launches 1 </summary>
 
 **client**
 
@@ -45,9 +43,18 @@ async function httpSubmitLaunch(launch) {
   }
 }
 
+// Delete launch with given ID.
 async function httpAbortLaunch(id) {
-  // TODO: Once API is ready.
-  // Delete launch with given ID.
+  try {
+    return await fetch(`${API_URL}/launches/${id}`, {
+      method: "delete",
+    });    
+  } catch (err){
+    console.log(err);
+    return {
+      ok: false,
+    }
+  }
 }
 
 export {
@@ -112,7 +119,7 @@ function useLaunches(onSuccessSound, onAbortSound, onFailureSound) {
     const response = await httpAbortLaunch(id);
 
     // TODO: Set success based on response.
-    const success = false;
+    const success = response.ok;
     if (success) {
       getLaunches();
       onAbortSound();
@@ -137,7 +144,9 @@ export default useLaunches;
 -   `server/src/models/launches.model.js` 
 ```
 const launches = new Map();
+
 let latestFlightNumber = 100;
+
 const launch = {
     flightNumber: 100,
     mission: 'Kepler Exploration X',
@@ -148,10 +157,17 @@ const launch = {
     upcoming: true,
     success: true
 };
+
 launches.set(launch.flightNumber, launch);
+
+function existsLaunchWithId(launchId){
+    return launches.has(launchId)
+}
+
 function getAllLaunches () {
     return Array.from(launches.values());
 }
+
 function addNewLaunch(launch) {
     latestFlightNumber++;
     launches.set(
@@ -161,11 +177,19 @@ function addNewLaunch(launch) {
             upcoming: true,
             customer: ['Zero to Mastery', 'NASA'],
             flightNumber: latestFlightNumber,
-    }));
+        })
+    );
 }
+
+function abortLaunchById (launchId) {
+
+}
+
 module.exports = {
     getAllLaunches,
     addNewLaunch,
+    existsLaunchWithId,
+    abortLaunchById,
 }
 ```
 
@@ -174,6 +198,7 @@ module.exports = {
 const { 
     getAllLaunches, 
     addNewLaunch, 
+    existsLaunchWithId,
 } = require('../../models/launches.model');
 
 function httpGetAllLaunches(req, res) {
@@ -183,22 +208,35 @@ function httpGetAllLaunches(req, res) {
 function httpAddNewLaunch (req, res) {
     const launch = req.body;
 
-    if ( !launch.mission || !launch.roket || !launch.launchDate 
-        || launch.target ) {
-            return res.status(400).json({
-                error: 'Missing required launch property'
-            });    
-        };
-
-    launch.launchDate = new Date(launch.launchDate);
-    if (isNaN(launch.launchDate.toString)){
+    if (!launch.mission || !launch.rocket || !launch.launchDate
+      || !launch.target) {
         return res.status(400).json({
-            error: 'Invalid launch Date',
-        });   
-    };
+          error: 'Missing required launch property',
+        });
+      }
+  
+    launch.launchDate = new Date(launch.launchDate);
+    if (isNaN(launch.launchDate)) {
+      return res.status(400).json({
+        error: 'Invalid launch date',
+      });
+    }
 
     addNewLaunch(launch);
     return res.status(201).json(launch);
+}
+
+function httpAbortLaunch (req, res) {
+  const launchId = req.params.id;
+
+  if (!existsLaunchWithId(launchId)){
+    return res.status(404).json({
+      error: 'Lauch not found',
+    });
+  }
+
+  //  if launch does exist
+  return res.status(200).json(aborted);
 }
 
 module.exports = {
@@ -210,15 +248,18 @@ module.exports = {
 -   `server/src/routes/launches/launches.router.js`
 ```
 const express = require('express');
+const { httpAbortLaunch } = require('../../../../client/src/hooks/requests');
 const {
     httpGetAllLaunches,
     httpAddNewLaunch,
+    httpAbortLaunch,
 } = require('./launches.controller');
 
 const launchesRouter = express.Router();
 
 launchesRouter.get('/', httpGetAllLaunches);
 launchesRouter.post('/', httpAddNewLaunch);
+launchesRouter.delete('/:id', httpAbortLaunch);
 
 module.exports = launchesRouter;
 ```
@@ -292,4 +333,4 @@ module.exports = app;
 
 ---
 
-[Previous](./125_POST_launches_Validation-For-POST-Requests.md) | [Next](./127_DELETE_launches_Aborting-Launches-1.md)
+[Previous](./126_Connecting-POST_launches-With-Front-End-Dashboard.md) | [Next]()
