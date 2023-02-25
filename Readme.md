@@ -183,8 +183,19 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [115. Automating Full Stack Applications With NPM](contents/115_Automating-Full-Stack-Applications-With-NPM.md)  
   -   [116. Serving React.js Front End In Production](contents/116_Serving-React.js-Front-End-In-Production.md)  
   -   [117. Setting BUILD_PATH On Windows](contents/117_Setting-BUILD_PATH-On-Windows.md)  
-  -   [118. ](contents)  
-  -   [119. ](contents)  
+  -   [118. Logging Requests With Morgan](contents/118_Logging-Requests-With-Morgan.md)  
+  -   [119. The Launches Model](contents/119_The-Launches-Model.md)  
+  -   [120. GET /launches](contents/120_GET_launches.md)  
+  -   [121. Serving Applications With Client Side Routing](contents/121_Serving-Applications-With-Client-Side-Routing.md)  
+  -   [122. Working With Data Models: Building a Data Access Layer](contents/122_Working-With-Data-Models_Building-a-Data-Access-Layer.md)  
+  -   [123. POST /launches: Creating Launches 1](contents/123_POST_launches_Creating-Launches-1.md)  
+  -   [124. POST /launches: Creating Launches 2](contents/124_POST_launches_Creating-Launches-2.md)  
+  -   [125. POST /launches: Validation For POST Requests](contents/125_POST_launches_Validation-For-POST-Requests.md)  
+  -   [126. Connecting POST /launches With Front End Dashboard](contents/126_Connecting-POST_launches-With-Front-End-Dashboard.md)  
+  -   [127. ](contents)  
+  -   [128. ](contents)  
+  -   [129. ](contents)  
+  -   [130. ](contents)  
 </details>
 
 <details>
