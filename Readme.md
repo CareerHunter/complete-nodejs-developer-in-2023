@@ -213,9 +213,18 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   <summary> Section 11: Improving Node Performance </summary>
 
   [Section 11: Improving Node Performance](contents)
-  -   [136. ](contents)    
+  -   [136. Code For This Section](contents/136_Code-For-This-Section.md)    
   -   [137. ](contents)    
   -   [138. ](contents)    
+</details>
+
+<details>
+  <summary> Section 12: Databases </summary>
+
+  [Section 12: Databases](contents)
+  -   [152. ](contents)    
+  -   [153. ](contents)    
+  -   [154. ](contents)    
 </details>
 
 
