@@ -218,8 +218,11 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [138. Building A Simple Blocking Server](contents/138_Building-A-Simple-Blocking-Server.md)    
   -   [139. Real Life Blocking Functions](contents/139_Real-Life-Blocking-Functions.md)    
   -   [140. Running Multiple Node Processes](contents/140_Running-Multiple-Node-Processes.md)    
-  -   [141. ](contents)    
-  -   [141. ](contents)    
+  -   [141. The Node Cluster Module](contents/141_The-Node-Cluster-Module.md)    
+  -   [142. ](contents)    
+  -   [143. ](contents)    
+  -   [144. ](contents)    
+  -   [145. ](contents)    
 </details>
 
 <details>
