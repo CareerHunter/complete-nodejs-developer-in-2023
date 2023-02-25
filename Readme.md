@@ -213,9 +213,31 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   <summary> Section 11: Improving Node Performance </summary>
 
   [Section 11: Improving Node Performance](contents)
-  -   [136. ](contents)    
-  -   [137. ](contents)    
-  -   [138. ](contents)    
+  -   [136. Code For This Section](contents/136_Code-For-This-Section.md)    
+  -   [137. Node Server Performance](contents/137_Node-Server-Performance.md)    
+  -   [138. Building A Simple Blocking Server](contents/138_Building-A-Simple-Blocking-Server.md)    
+  -   [139. Real Life Blocking Functions](contents/139_Real-Life-Blocking-Functions.md)    
+  -   [140. Running Multiple Node Processes](contents/140_Running-Multiple-Node-Processes.md)    
+  -   [141. The Node Cluster Module](contents/141_The-Node-Cluster-Module.md)    
+  -   [142. Clustering In Action](contents/142_Clustering-In-Action.md)    
+  -   [143. Maximizing Cluster Performance](contents/143_Maximizing-Cluster-Performance.md)    
+  -   [144. ](contents)  
+  -   [145. ](contents)   
+  -   [146. ](contents)    
+  -   [147. ](contents)    
+  -   [148. ](contents)    
+  -   [149. ](contents)         
+  -   [150. ](contents)    
+  -   [151. ](contents)    
+</details>
+
+<details>
+  <summary> Section 12: Databases </summary>
+
+  [Section 12: Databases](contents)
+  -   [152. ](contents)    
+  -   [153. ](contents)    
+  -   [154. ](contents)    
 </details>
 
 
