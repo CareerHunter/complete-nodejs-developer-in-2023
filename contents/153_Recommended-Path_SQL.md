@@ -11,7 +11,7 @@ https://github.com/r-spacex/SpaceX-API
 <details>
   <summary> Section 12: Databases </summary>
 
-  - [Codebase: SpaceX-API](../src/12_SpaceX-API/)
+  - [Codebase: SpaceX-API](../src/s12_SpaceX-API/)
 
 </details>
 

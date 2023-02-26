@@ -16,6 +16,14 @@ console.log('3');
 
 
 
+<details>
+  <summary> Section 21: Appendix: How Javascript Works </summary>
+
+  - [Codebase: js-work](../src/s21_js-work/)
+
+</details>
+
+
 ---
 
 [Previous](./364_Memory-Leaks.md) | [Next](./368_Node.js.md)

@@ -291,6 +291,15 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   380. [Recommended Path: Back To Node](contents/380_Recommended-Path_Back-To-Node.md)
 </details>
 
+<details>
+  <summary> Section 25: Appendix: SQL </summary>
+
+  [Section 25: Appendix: SQL](contents)
+  - [409. ](contents)  
+  - [410. ](contents)  
+  
+</details>
+
 ##  Requirements
 - Just basic JavaScript knowledge
 - You DO NOT need any prior experience with NodeJS!

@@ -66,7 +66,7 @@ describe ('Test POST /launches', () => {
 <details>
   <summary> Section 10: Testing APIs </summary>
 
-  - [Codebase: testing-apis](../src/10_testing-apis/)
+  - [Codebase: testing-apis](../src/s10_testing-apis/)
 
 </details>
 

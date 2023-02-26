@@ -16,6 +16,14 @@ Here are some of the most popular JavaScript engines:
 Each JavaScript engine has its own strengths and weaknesses, and they may implement JavaScript differently, leading to different performance characteristics and capabilities.
 
 
+<details>
+  <summary> Section 21: Appendix: How Javascript Works </summary>
+
+  - [Codebase: js-work](../src/s21_js-work/)
+
+</details>
+
+
 ---
 
 [Previous](./351_Quick-Note_Upcoming-Videos.md) | [Next](./359_Writing-Optimized-Code.md)

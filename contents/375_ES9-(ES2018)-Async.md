@@ -110,6 +110,14 @@ getData2();
 
 </details>
 
+<details>
+  <summary> Section 22: Appendix: Asynchronous JavaScript </summary>
+
+  - [Codebase: Async](../src/s22_Async/)
+
+</details>
+
+
 ---
 
 [Previous](./374_ES9-(ES2018).md) | [Next](./376_Job-Queue.md)

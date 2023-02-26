@@ -90,7 +90,7 @@ app.listen(3000);
 <details>
   <summary> Section 11: Improving Node Performance </summary>
 
-- [Codebase: performance-example](../src/11_performance-example/)
+  - [Codebase: performance-example](../src/s11_performance-example/)
 
 </details>
 

@@ -85,6 +85,14 @@ getData()
 
 
 
+<details>
+  <summary> Section 22: Appendix: Asynchronous JavaScript </summary>
+
+  - [Codebase: Async](../src/s22_Async/)
+
+</details>
+
+
 ---
 
 [Previous](./372-Promises.md) | [Next](./374_ES9-(ES2018).md)

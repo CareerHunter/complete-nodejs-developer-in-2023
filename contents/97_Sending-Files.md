@@ -179,7 +179,7 @@ module.exports = messagesRouter;
 <details>
   <summary> Section 8: First Express.js API </summary>
 
-  - [Codebase: express-project](../src/8_express-project/)
+  - [Codebase: express-project](../src/s8_express-project/)
 
 </details>
 

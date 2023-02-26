@@ -39,6 +39,14 @@ Promise.allSettled([promisesOne, promisesTwo]).then(data => console.log(data))
 ]
 ```
 
+<details>
+  <summary> Section 22: Appendix: Asynchronous JavaScript </summary>
+
+  - [Codebase: Async](../src/s22_Async/)
+
+</details>
+
+
 ---
 
 [Previous](./377_Parallel-Sequence-and-Race.md) | [Next](./379_Threads-Concurrency-and-Parallelism.md)

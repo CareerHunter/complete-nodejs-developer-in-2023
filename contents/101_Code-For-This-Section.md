@@ -13,7 +13,7 @@ The front end code we'll be using for this section is attached to the NASA Dashb
 <details>
   <summary> Section 9: NASA Project </summary>
 
-  - [Codebase: nasa-project](../src/9_nasa-project)
+  - [Codebase: nasa-project](../src/s9_nasa-project/)
 
 </details>
 

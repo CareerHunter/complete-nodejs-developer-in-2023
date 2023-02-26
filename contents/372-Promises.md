@@ -107,6 +107,14 @@ Promise.all(urls.map(urls => {
 
 </details>
 
+<details>
+  <summary> Section 22: Appendix: Asynchronous JavaScript </summary>
+
+  - [Codebase: Async](../src/s22_Async/)
+
+</details>
+
+
 ---
 
 [Previous](./371_Section-Overview.md) | [Next](./373_ES8-Async-Await.md)
