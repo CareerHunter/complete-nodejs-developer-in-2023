@@ -12,11 +12,10 @@
 
   - create server.js `touch server.js`
 
+  - install PM2 `npm install pm2` (Note you can not use pm2 command)
 
+  - install PM2 `npm install pm2 -g` or `sudo npm install pm2 -g` (Note you can use pm2 command)
+    - run server.js `pm2 start server.js`
   
- 
-  - install nodemon `npm i nodemon --save-dev`
-
-  - add script: `"watch": "nodemon server.js",` in `package.json`
 
 
