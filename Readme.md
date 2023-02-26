@@ -212,7 +212,7 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
 <details>
   <summary> Section 11: Improving Node Performance </summary>
 
-  [Section 11: Improving Node Performance](contents)
+  [Section 11: Improving Node Performance](contents/Section-11_Improving-Node-Performance.md)
   -   [136. Code For This Section](contents/136_Code-For-This-Section.md)    
   -   [137. Node Server Performance](contents/137_Node-Server-Performance.md)    
   -   [138. Building A Simple Blocking Server](contents/138_Building-A-Simple-Blocking-Server.md)    
@@ -228,16 +228,25 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [148. Zero Downtime Restart](contents/148_Zero-Downtime-Restart.md)    
   -   [149. Improving Performance Of Our NASA Project](contents/149_Improving-Performance-Of-Our-NASA-Project.md)         
   -   [150. Worker Threads](contents/150_Worker-Threads.md)    
-  -   [151. ](contents)    
+  -   [151. Worker Threads In Action](contents/151_Worker-Threads-In-Action.md)    
 </details>
 
 <details>
   <summary> Section 12: Databases </summary>
 
-  [Section 12: Databases](contents)
-  -   [152. ](contents)    
+  [Section 12: Databases](contents/Section-12_Databases.md)
+  -   [152. Introduction to Databases](contents/152_Introduction-to-Databases.md)    
   -   [153. ](contents)    
   -   [154. ](contents)    
+</details>
+
+<details>
+  <summary> Section 13: Working With REST APIs - SpaceX Project </summary>
+
+  [Section 13: Working With REST APIs - SpaceX Project](contents)
+  -   [187. ](contents)    
+  -   [188. ](contents)    
+  -   [189. ](contents)    
 </details>
 
 
