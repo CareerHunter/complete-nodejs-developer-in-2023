@@ -295,9 +295,20 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   <summary> Section 25: Appendix: SQL </summary>
 
   [Section 25: Appendix: SQL](contents)
-  - [409. ](contents)  
-  - [410. ](contents)  
-  
+  - [409. Quick Note: Upcoming Videos](contents/409_Quick-Note_Upcoming-Videos.md)  
+  - [410. Exercise: Building Amazon](contents/410_Exercise_Building-Amazon.md)  
+  - [411. Exercise: Building Amazon 2](contents/411_Exercise_Building-Amazon-2.md)    
+  - [412. 5 Types Of Databases](contents/412_5-Types-Of-Databases.md)    
+  - [413. ](contents)    
+  - [414. ](contents)    
+  - [415. ](contents)    
+</details>
+
+<details>
+  <summary> Section 26: BONUS SECTION </summary>
+
+  [Section 25: Appendix: SQL](contents)
+  - [431. Special Bonus Lecture](contents/431_Special-Bonus-Lecture.md)   
 </details>
 
 ##  Requirements
