@@ -235,8 +235,8 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   <summary> Section 12: Databases </summary>
 
   [Section 12: Databases](contents/Section-12_Databases.md)
-  -   [152. Introduction to Databases](contents/152_Introduction-to-Databases.md)    
-  -   [153. ](contents)    
+  -   [152. Introduction to Databases](contents/152_Introduction-to-Databases.md) 
+  -   [153. Recommended Path: SQL](contents/153_Recommended-Path_SQL.md)    
   -   [154. ](contents)    
 </details>
 
