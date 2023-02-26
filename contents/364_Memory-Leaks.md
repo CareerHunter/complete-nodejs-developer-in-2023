@@ -7,6 +7,14 @@
 
 
 
+<details>
+  <summary> Section 21: Appendix: How Javascript Works </summary>
+
+  - [Codebase: js-work](../src/s21_js-work/)
+
+</details>
+
+
 ---
 
 [Previous](./359_Writing-Optimized-Code.md) | [Next](./367_Javascript-Runtime.md)

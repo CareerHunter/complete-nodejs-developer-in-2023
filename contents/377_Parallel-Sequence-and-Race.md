@@ -52,6 +52,14 @@ prallel is done: a b c
 sequence is done a b c
 ```
 
+<details>
+  <summary> Section 22: Appendix: Asynchronous JavaScript </summary>
+
+  - [Codebase: Async](../src/s22_Async/)
+
+</details>
+
+
 ---
 
 [Previous](./376_Job-Queue.md) | [Next](./378_ES2020_allSettled().md)

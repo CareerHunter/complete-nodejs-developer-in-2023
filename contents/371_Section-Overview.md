@@ -30,6 +30,14 @@ console.log('3', 'is a crowd');
 ```
 
 
+<details>
+  <summary> Section 22: Appendix: Asynchronous JavaScript </summary>
+
+  - [Codebase: Async](../src/s22_Async/)
+
+</details>
+
+
 ---
 
 [Previous](./370_Quick-Note_Upcoming-Videos.md) | [Next](./372-Promises.md)

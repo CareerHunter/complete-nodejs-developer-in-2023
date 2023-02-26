@@ -8,7 +8,7 @@ https://github.com/odziem/planets-project
 <details>
   <summary> Section 6: Node.js File I/O - Planets Project </summary>
 
-  - [Codebase: planets-project](../src/6_planets-project/)
+  - [Codebase: planets-project](../src/s6_planets-project/)
 
 </details>
 

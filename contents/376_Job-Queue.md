@@ -32,6 +32,14 @@ console.log('3', 'is a crowd');
 2 can be as bad as one
 ```
 
+<details>
+  <summary> Section 22: Appendix: Asynchronous JavaScript </summary>
+
+  - [Codebase: Async](../src/s22_Async/)
+
+</details>
+
+
 ---
 
 [Previous](./375_ES9-(ES2018)-Async.md) | [Next](./377_Parallel-Sequence-and-Race.md)

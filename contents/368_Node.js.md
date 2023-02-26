@@ -9,6 +9,14 @@
 
 
 
+<details>
+  <summary> Section 21: Appendix: How Javascript Works </summary>
+
+  - [Codebase: js-work](../src/s21_js-work/)
+
+</details>
+
+
 ---
 
 [Previous](./367_Javascript-Runtime.md) | [Next](./369_Recommended-Path_Back-To-Node.md)

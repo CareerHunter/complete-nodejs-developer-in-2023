@@ -235,8 +235,8 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   <summary> Section 12: Databases </summary>
 
   [Section 12: Databases](contents/Section-12_Databases.md)
-  -   [152. Introduction to Databases](contents/152_Introduction-to-Databases.md)    
-  -   [153. ](contents)    
+  -   [152. Introduction to Databases](contents/152_Introduction-to-Databases.md) 
+  -   [153. Recommended Path: SQL](contents/153_Recommended-Path_SQL.md)    
   -   [154. ](contents)    
 </details>
 
@@ -289,6 +289,15 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   378. [ES2020: allSettled()](contents/378_ES2020_allSettled().md)
   379. [Threads, Concurrency and Parallelism](contents/379_Threads-Concurrency-and-Parallelism.md)
   380. [Recommended Path: Back To Node](contents/380_Recommended-Path_Back-To-Node.md)
+</details>
+
+<details>
+  <summary> Section 25: Appendix: SQL </summary>
+
+  [Section 25: Appendix: SQL](contents)
+  - [409. ](contents)  
+  - [410. ](contents)  
+  
 </details>
 
 ##  Requirements

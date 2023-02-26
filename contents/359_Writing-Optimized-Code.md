@@ -10,6 +10,14 @@
 
 
 
+<details>
+  <summary> Section 21: Appendix: How Javascript Works </summary>
+
+  - [Codebase: js-work](../src/s21_js-work/)
+
+</details>
+
+
 ---
 
 [Previous](./352_JavaScript-Engine.md) | [Next](./364_Memory-Leaks.md)

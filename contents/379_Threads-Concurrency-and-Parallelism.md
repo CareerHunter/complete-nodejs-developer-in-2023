@@ -27,6 +27,14 @@ console.log(spawn('git', ['stuff']));
 
 </details>
 
+<details>
+  <summary> Section 22: Appendix: Asynchronous JavaScript </summary>
+
+  - [Codebase: Async](../src/s22_Async/)
+
+</details>
+
+
 ---
 
 [Previous](./378_ES2020_allSettled().md) | [Next](./380_Recommended-Path_Back-To-Node.md)

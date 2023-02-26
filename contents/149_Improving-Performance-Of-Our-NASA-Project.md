@@ -15,13 +15,6 @@ https://github.com/odziem/nasa-project
 
 
 <details>
-  <summary> 11_nasa-project-pm2 </summary>
-
--   [Codebase: nasa-project-pm2](../src/11_nasa-project-pm2/)
-
-</details>
-
-<details>
   <summary> result - capture </summary>
 
 -   goto `http://localhost:8000/launch` add two launches --> `http://localhost:8000/upcoming` only two not three launches ???
@@ -34,6 +27,13 @@ https://github.com/odziem/nasa-project
 
 </details>  
 
+
+<details>
+  <summary> Section 11: Improving Node Performance </summary>
+
+  - [Codebase: performance-example](../src/s11_performance-example/)
+
+</details>
 
 ---
 
