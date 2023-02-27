@@ -242,7 +242,7 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [156. Choosing a Database for our NASA Project](contents/156_Choosing-a-Database-for-our-NASA-Project.md)    
   -   [157. SQL vs MongoDB: Trends and Object-Relational Impedance Mismatch](contents/157_SQL-vs-MongoDB_Trends-and-Object-Relational-Impedance-Mismatch.md)    
   -   [158. SQL vs MongoDB: Schemas, References, and ACID Transactions](contents/158_SQL-vs-MongoDB_Schemas-References-and-ACID-Transactions.md)    
-  -   [159. ](contents)    
+  -   [159. Setting up MongoDB Atlas](contents/159_Setting-up-MongoDB-Atlas.md)    
   -   [160. ](contents)    
   -   [161. ](contents)    
   -   [162. ](contents)    
