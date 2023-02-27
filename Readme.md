@@ -244,7 +244,7 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [158. SQL vs MongoDB: Schemas, References, and ACID Transactions](contents/158_SQL-vs-MongoDB_Schemas-References-and-ACID-Transactions.md)    
   -   [159. Setting up MongoDB Atlas](contents/159_Setting-up-MongoDB-Atlas.md)    
   -   [160. Connecting to MongoDB](contents/160_Connecting-to-MongoDB.md)    
-  -   [161. ](contents)    
+  -   [161. Connecting with the Latest Version of Mongoose](contents/161_Connecting-with-the-Latest-Version-of-Mongoose.md)    
   -   [162. ](contents)    
   -   [163. ](contents)    
   -   [164. ](contents)    

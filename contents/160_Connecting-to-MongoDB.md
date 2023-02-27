@@ -67,10 +67,10 @@ Listening on port 8000...
 <details>
   <summary> Section 12: Databases </summary>
 
-  - [Codebase: SpaceX-API](../src/s12_nasa-project-pm2/)
+  - [Codebase: s12_nasa-project-pm2](../src/s12_nasa-project-pm2/)
 
 </details>
 
 ---
 
-[Previous](./159_Setting-up-MongoDB-Atlas.md) | [Next]()
+[Previous](./159_Setting-up-MongoDB-Atlas.md) | [Next](./161_Connecting-with-the-Latest-Version-of-Mongoose.md)
