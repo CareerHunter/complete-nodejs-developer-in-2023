@@ -1,7 +1,7 @@
-# 425. Rows
+# 426. Primary And Foreign Keys
 
 <p align="center" >
-    <img src="../imags/425_Rows.png" width="45%" >
+    <img src="../imags/426_Primary-And-Foreign-Keys.png" width="45%" >
 </p> 
 
 
@@ -15,4 +15,4 @@
 
 ---
 
-[Previous](./424_Columns.md) | [Next](./426_Primary-And-Foreign-Keys.md)
+[Previous](./425_Rows.md) | [Next]()
