@@ -237,7 +237,23 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   [Section 12: Databases](contents/Section-12_Databases.md)
   -   [152. Introduction to Databases](contents/152_Introduction-to-Databases.md) 
   -   [153. Recommended Path: SQL](contents/153_Recommended-Path_SQL.md)    
-  -   [154. ](contents)    
+  -   [154. Comparing SQL vs NoSQL](contents/154_Comparing-SQL-vs-NoSQL.md)    
+  -   [155. Database Schemas & Schemaless Databases](contents/155_Database-Schemas-%26-Schemaless-Databases.md)    
+  -   [156. Choosing a Database for our NASA Project](contents/156_Choosing-a-Database-for-our-NASA-Project.md)    
+  -   [157. SQL vs MongoDB: Trends and Object-Relational Impedance Mismatch](contents/157_SQL-vs-MongoDB_Trends-and-Object-Relational-Impedance-Mismatch.md)    
+  -   [158. SQL vs MongoDB: Schemas, References, and ACID Transactions](contents/158_SQL-vs-MongoDB_Schemas-References-and-ACID-Transactions.md)    
+  -   [159. Setting up MongoDB Atlas](contents/159_Setting-up-MongoDB-Atlas.md)    
+  -   [160. ](contents)    
+  -   [161. ](contents)    
+  -   [162. ](contents)    
+  -   [163. ](contents)    
+  -   [164. ](contents)    
+  -   [165. ](contents)    
+  -   [166. ](contents)    
+  -   [167. ](contents)    
+  -   [168. ](contents)    
+  -   [169. ](contents)    
+  -   [170. ](contents)    
 </details>
 
 <details>
@@ -295,9 +311,35 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   <summary> Section 25: Appendix: SQL </summary>
 
   [Section 25: Appendix: SQL](contents)
-  - [409. ](contents)  
-  - [410. ](contents)  
-  
+  - [409. Quick Note: Upcoming Videos](contents/409_Quick-Note_Upcoming-Videos.md)  
+  - [410. Exercise: Building Amazon](contents/410_Exercise_Building-Amazon.md)  
+  - [411. Exercise: Building Amazon 2](contents/411_Exercise_Building-Amazon-2.md)    
+  - [412. 5 Types Of Databases](contents/412_5-Types-Of-Databases.md)    
+  - [413. Exercise: What Is A Database?](contents/413_Exercise_What-Is-A-Database%3F.md)    
+  - [414. SQL Playground](contents/414_SQL-Playground.md)    
+  - [415. What Is SQL?](contents/415_What-Is-SQL%3F.md)    
+  - [416. What Is A Query?](contents/416_What-Is-A-Query%3F.md)    
+  - [417. Exercise: Setting Up Your First Database](contents/417_Exercise_Setting-Up-Your-First-Database.md)    
+  - [418. Imperative vs Declarative](contents/418_Imperative-vs-Declarative.md)    
+  - [419. History of SQL](contents/419_History-of-SQL.md)    
+  - [420. Optional: History of SQL Deep Dive](contents)    
+  - [421. Exercises: The Select Statement](contents/421_Exercises_The-Select-Statement.md)    
+  - [422. SQL Standards](contents/422_SQL-Standards.md)    
+  - [423. Tables](contents/423_Tables.md)    
+  - [424. Columns](contents/424_Columns.md)    
+  - [425. Rows](contents/425_Rows.md)    
+  - [426. Primary And Foreign Keys](contents/426.%20Primary%20And%20Foreign%20Keys.md)    
+  - [427. Relational vs NoSQL, PostgreSQL vs MongoDB Databases](contents/427_Relational_vs_NoSQL-PostgreSQL_vs_MongoDB-Databases.md)    
+  - [428. Scalability](contents/428_Scalability.md)    
+  - [429. Sharding](contents/429_Sharding.md)    
+  - [430. Recommended Path: Back to Node](contents/430_Recommended-Path_Back-to-Node.md)    
+</details>
+
+<details>
+  <summary> Section 26: BONUS SECTION </summary>
+
+  [Section 25: Appendix: SQL](contents)
+  - [431. Special Bonus Lecture](contents/431_Special-Bonus-Lecture.md)   
 </details>
 
 ##  Requirements
