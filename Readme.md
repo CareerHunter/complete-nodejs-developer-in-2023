@@ -245,7 +245,7 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [159. Setting up MongoDB Atlas](contents/159_Setting-up-MongoDB-Atlas.md)    
   -   [160. Connecting to MongoDB](contents/160_Connecting-to-MongoDB.md)    
   -   [161. Connecting with the Latest Version of Mongoose](contents/161_Connecting-with-the-Latest-Version-of-Mongoose.md)    
-  -   [162. ](contents)    
+  -   [162. Mongoose](contents/162_Mongoose.md)    
   -   [163. ](contents)    
   -   [164. ](contents)    
   -   [165. ](contents)    
