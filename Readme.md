@@ -237,7 +237,23 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   [Section 12: Databases](contents/Section-12_Databases.md)
   -   [152. Introduction to Databases](contents/152_Introduction-to-Databases.md) 
   -   [153. Recommended Path: SQL](contents/153_Recommended-Path_SQL.md)    
-  -   [154. ](contents)    
+  -   [154. Comparing SQL vs NoSQL](contents/154_Comparing-SQL-vs-NoSQL.md)    
+  -   [155. Database Schemas & Schemaless Databases](contents/155_Database-Schemas-%26-Schemaless-Databases.md)    
+  -   [156. Choosing a Database for our NASA Project](contents/156_Choosing-a-Database-for-our-NASA-Project.md)    
+  -   [157. SQL vs MongoDB: Trends and Object-Relational Impedance Mismatch](contents/157_SQL-vs-MongoDB_Trends-and-Object-Relational-Impedance-Mismatch.md)    
+  -   [158. SQL vs MongoDB: Schemas, References, and ACID Transactions](contents/158_SQL-vs-MongoDB_Schemas-References-and-ACID-Transactions.md)    
+  -   [159. ](contents)    
+  -   [160. ](contents)    
+  -   [161. ](contents)    
+  -   [162. ](contents)    
+  -   [163. ](contents)    
+  -   [164. ](contents)    
+  -   [165. ](contents)    
+  -   [166. ](contents)    
+  -   [167. ](contents)    
+  -   [168. ](contents)    
+  -   [169. ](contents)    
+  -   [170. ](contents)    
 </details>
 
 <details>
@@ -316,7 +332,7 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   - [427. Relational vs NoSQL, PostgreSQL vs MongoDB Databases](contents/427_Relational_vs_NoSQL-PostgreSQL_vs_MongoDB-Databases.md)    
   - [428. Scalability](contents/428_Scalability.md)    
   - [429. Sharding](contents/429_Sharding.md)    
-  - [430. ](contents)    
+  - [430. Recommended Path: Back to Node](contents/430_Recommended-Path_Back-to-Node.md)    
 </details>
 
 <details>
