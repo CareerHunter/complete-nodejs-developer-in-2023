@@ -299,9 +299,12 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   - [410. Exercise: Building Amazon](contents/410_Exercise_Building-Amazon.md)  
   - [411. Exercise: Building Amazon 2](contents/411_Exercise_Building-Amazon-2.md)    
   - [412. 5 Types Of Databases](contents/412_5-Types-Of-Databases.md)    
-  - [413. ](contents)    
-  - [414. ](contents)    
-  - [415. ](contents)    
+  - [413. Exercise: What Is A Database?](contents/413_Exercise_What-Is-A-Database%3F.md)    
+  - [414. SQL Playground](contents/414_SQL-Playground.md)    
+  - [415. What Is SQL?](contents/415_What-Is-SQL%3F.md)    
+  - [416. What Is A Query?](contents/416_What-Is-A-Query%3F.md)    
+  - [417. ](contents)    
+  - [418. ](contents)    
 </details>
 
 <details>
