@@ -10,4 +10,4 @@
 
 ---
 
-[Previous](./427_Relational_vs_NoSQL-PostgreSQL_vs_MongoDB-Databases.md) | [Next]()
+[Previous](./427_Relational_vs_NoSQL-PostgreSQL_vs_MongoDB-Databases.md) | [Next](./429_Sharding.md)
