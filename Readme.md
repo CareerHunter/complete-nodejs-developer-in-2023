@@ -308,8 +308,15 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   - [419. History of SQL](contents/419_History-of-SQL.md)    
   - [420. Optional: History of SQL Deep Dive](contents)    
   - [421. Exercises: The Select Statement](contents/421_Exercises_The-Select-Statement.md)    
-  - [422. ](contents)    
-  - [423. ](contents)    
+  - [422. SQL Standards](contents/422_SQL-Standards.md)    
+  - [423. Tables](contents/423_Tables.md)    
+  - [424. Columns](contents/424_Columns.md)    
+  - [425. Rows](contents/425_Rows.md)    
+  - [426. ](contents)    
+  - [427. ](contents)    
+  - [428. ](contents)    
+  - [429. ](contents)    
+  - [430. ](contents)    
 </details>
 
 <details>

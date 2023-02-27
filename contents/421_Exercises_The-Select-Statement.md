@@ -20,4 +20,4 @@ https://www.w3schools.com/sql/exercise.asp?filename=exercise_select1
 
 ---
 
-[Previous](./420_Optional_History-of-SQL-Deep-Dive.md) | [Next]()
+[Previous](./420_Optional_History-of-SQL-Deep-Dive.md) | [Next](./422_SQL-Standards.md)
