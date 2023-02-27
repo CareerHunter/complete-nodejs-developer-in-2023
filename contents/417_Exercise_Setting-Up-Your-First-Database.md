@@ -31,4 +31,4 @@ SELECT col1, col2 FROM some_table **=> This col1 and col2 data from a table**
 
 ---
 
-[Previous](./416_What-Is-A-Query%3F.md) | [Next]()
+[Previous](./416_What-Is-A-Query%3F.md) | [Next](./418_Imperative-vs-Declarative.md)

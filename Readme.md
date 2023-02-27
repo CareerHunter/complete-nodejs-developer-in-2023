@@ -304,7 +304,7 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   - [415. What Is SQL?](contents/415_What-Is-SQL%3F.md)    
   - [416. What Is A Query?](contents/416_What-Is-A-Query%3F.md)    
   - [417. Exercise: Setting Up Your First Database](contents/417_Exercise_Setting-Up-Your-First-Database.md)    
-  - [418. ](contents)    
+  - [418. Imperative vs Declarative](contents/418_Imperative-vs-Declarative.md)    
 </details>
 
 <details>
