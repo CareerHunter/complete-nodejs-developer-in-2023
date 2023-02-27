@@ -313,8 +313,8 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   - [424. Columns](contents/424_Columns.md)    
   - [425. Rows](contents/425_Rows.md)    
   - [426. Primary And Foreign Keys](contents/426.%20Primary%20And%20Foreign%20Keys.md)    
-  - [427. ](contents)    
-  - [428. ](contents)    
+  - [427. Relational vs NoSQL, PostgreSQL vs MongoDB Databases](contents/427_Relational_vs_NoSQL-PostgreSQL_vs_MongoDB-Databases.md)    
+  - [428. Scalability](contents/428_Scalability.md)    
   - [429. ](contents)    
   - [430. ](contents)    
 </details>
