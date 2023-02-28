@@ -53,4 +53,4 @@ const launchesSchema = new mongoose.Schema({
 
 ---
 
-[Previous](./162_Mongoose.md) | [Next]()
+[Previous](./162_Mongoose.md) | [Next](./164_Exercise_Creating-Mongoose-Schema-for-Planets.md)
