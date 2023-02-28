@@ -2,8 +2,6 @@
 
 https://github.com/odziem/nasa-project
 
-
-
 <details>
   <summary> Section 12: Databases </summary>
 
@@ -13,4 +11,4 @@ https://github.com/odziem/nasa-project
 
 ---
 
-[Previous](./171_Exploring-Data-Using-Atlas.md) | [Next]()
+[Previous](./171_Exploring-Data-Using-Atlas.md) | [Next](./173_ObjectIDs.md)

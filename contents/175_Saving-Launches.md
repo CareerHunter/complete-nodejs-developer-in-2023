@@ -1,3 +1,13 @@
+# 175. Saving Launches
+
+https://github.com/odziem/nasa-project
+
+<details>
+  <summary> 174. Excluding Fields From The Response </summary>
+
+  -   `server/src/models/planets.model.js` updating
+
+  ```
 const  { parse } = require('csv-parse');
 const fs = require('fs');
 const path = require('path');
@@ -58,3 +68,21 @@ module.exports = {
     loadPlanetsData,
     getAllPlanets,
 };
+  ```
+
+<p align="center" >
+    <img src="../imags/174_Excluding-Fields-From-The-Response.png" width="90%" > 
+</p> 
+
+</details>
+
+<details>
+  <summary> Section 12: Databases </summary>
+
+  - [Codebase: s12_nasa-project-pm2](../src/s12_nasa-project-pm2/)
+
+</details>
+
+---
+
+[Previous](./174_Excluding-Fields-From-The-Response.md) | [Next]()

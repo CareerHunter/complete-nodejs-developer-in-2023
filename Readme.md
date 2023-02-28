@@ -256,9 +256,14 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [170. The Upsert Operation](contents/170_The-Upsert-Operation.md)    
   -   [171. Exploring Data Using Atlas](contents/171_Exploring-Data-Using-Atlas.md)    
   -   [172. Updating Project Architecture](contents/172_Updating-Project-Architecture.md)    
-  -   [173. ](contents)    
-  -   [174. ](contents)    
-  -   [175. ](contents)    
+  -   [173. ObjectIDs](contents/173_ObjectIDs.md)    
+  -   [174. Excluding Fields From The Response](contents/174_Excluding-Fields-From-The-Response.md)    
+  -   [175. Saving Launches](contents/175_Saving-Launches.md)    
+  -   [176. ](contents)    
+  -   [177. ](contents)    
+  -   [178. ](contents)    
+  -   [179. ](contents)    
+  -   [180. ](contents)    
 </details>
 
 <details>
