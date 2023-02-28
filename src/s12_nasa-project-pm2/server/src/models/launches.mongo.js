@@ -1,11 +1,3 @@
-# 163. Creating Mongoose Schema for Launches
-
-<details>
-  <summary> 163. Creating Mongoose Schema for Launches </summary>
-
--   `server/src/models/launches.mongo.js`
-
-```
 const mongoose = require('mongoose');
 
 const launchesSchema = new mongoose.Schema({
@@ -40,17 +32,3 @@ const launchesSchema = new mongoose.Schema({
         default: true
     },  
 })
-```
-
-</details>
-
-<details>
-  <summary> Section 12: Databases </summary>
-
-  - [Codebase: s12_nasa-project-pm2](../src/s12_nasa-project-pm2/)
-
-</details>
-
----
-
-[Previous](./162_Mongoose.md) | [Next]()

@@ -246,7 +246,7 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [160. Connecting to MongoDB](contents/160_Connecting-to-MongoDB.md)    
   -   [161. Connecting with the Latest Version of Mongoose](contents/161_Connecting-with-the-Latest-Version-of-Mongoose.md)    
   -   [162. Mongoose](contents/162_Mongoose.md)    
-  -   [163. ](contents)    
+  -   [163. Creating Mongoose Schema for Launches](contents/163_Creating-Mongoose-Schema-for-Launches.md)    
   -   [164. ](contents)    
   -   [165. ](contents)    
   -   [166. ](contents)    
