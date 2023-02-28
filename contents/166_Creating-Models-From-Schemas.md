@@ -1,9 +1,9 @@
-# 164. Exercise: Creating Mongoose Schema for Planets
+# 166. Creating Models From Schemas
 
+https://github.com/odziem/nasa-project
 
 <details>
-  <summary> 164. Exercise: Creating Mongoose Schema for Planets </summary>
-
+  <summary> 165. Reminder: Destination Planets Dropdown </summary>
 
 -   `server/src/models/planets.mongo.js`
 
@@ -16,6 +16,9 @@ const planetSchema = new mongoose.Schema({
         required: true,
     } 
 });
+
+// Connects planetSchema with the "planets" collection
+module.exports = mongoose.model('Planet', planetSchema);
 ```
 
 **Note:** update `client/src/pages/launch.js` to change the name `kepler_name` to `keplerName`  
@@ -115,7 +118,10 @@ const launchesSchema = new mongoose.Schema({
         required: true,
         default: true
     },  
-})
+});
+
+// Connects launchesSchema with the "launches" collection
+module.exports = mongoose.model('Launch', launchesSchema);
 ```
 
 </details>
@@ -129,4 +135,4 @@ const launchesSchema = new mongoose.Schema({
 
 ---
 
-[Previous](./163_Creating-Mongoose-Schema-for-Launches.md) | [Next](./165_Reminder_Destination-Planets-Dropdown.md)
+[Previous](./165_Reminder_Destination-Planets-Dropdown.md) | [Next](./167_Mongoose-Models-vs-MVC-Models.md)

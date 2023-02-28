@@ -1,9 +1,20 @@
-# 164. Exercise: Creating Mongoose Schema for Planets
+#   165. Reminder: Destination Planets Dropdown
 
+**Friendly reminder!** If you load the front end and you see an empty list of planets in the Destination dropdown on the launch page:
+
+<p align="center" >
+    <img src="../imags/165_Reminder_Destination-Planets-Dropdown.png" width="45%" > 
+</p> 
+
+You will need to `npm run deploy` again to update the public folder in the server directory.
+
+Remember, we've updated the dropdown in the Launch.js file in our client folder to use `planet.keplerName` instead of `planet.kepler_name`. If we don't run the `npm run deploy` script before running our npm run server script, our server will be referencing an old static file and we'll get blank labels for the planet names.
+
+
+https://github.com/odziem/nasa-project
 
 <details>
-  <summary> 164. Exercise: Creating Mongoose Schema for Planets </summary>
-
+  <summary> 165. Reminder: Destination Planets Dropdown </summary>
 
 -   `server/src/models/planets.mongo.js`
 
@@ -16,6 +27,9 @@ const planetSchema = new mongoose.Schema({
         required: true,
     } 
 });
+
+// Connects planetSchema with the "planets" collection
+module.exports = mongoose.model('Planet', planetSchema);
 ```
 
 **Note:** update `client/src/pages/launch.js` to change the name `kepler_name` to `keplerName`  
@@ -115,7 +129,10 @@ const launchesSchema = new mongoose.Schema({
         required: true,
         default: true
     },  
-})
+});
+
+// Connects launchesSchema with the "launches" collection
+module.exports = mongoose.model('Launch', launchesSchema);
 ```
 
 </details>
