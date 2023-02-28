@@ -1,26 +1,11 @@
-# 169. Finding Documents
+# 170. The Upsert Operation
 
 https://github.com/odziem/nasa-project
 
 <details>
-  <summary> 169. Finding Documents </summary>
+  <summary> 170. The Upsert Operation </summary>
 
--   `server/src/routes/planets.controller.js`   updating
-
-```
-const { getAllPlanets } = require('../../models/planets.model')
-
-async function httpGetAllPlanets(req, res) {
-    // res.status(200).json(planets); 
-    return res.status(200).json(await getAllPlanets());
-};
-
-module.exports = {
-    httpGetAllPlanets,
-}
-```
-
--   `server/src/models/planets.model.js` updating
+-   `server/src/models/planets.model.js` 
 
 ```
 const  { parse } = require('csv-parse');
@@ -28,8 +13,6 @@ const fs = require('fs');
 const path = require('path');
 
 const planets = require('./planets.mongo');
-
-const habitablePlanets = [];
 
 function isHabitablePlanet(planet) {
     return planet['koi_disposition'] === 'CONFIRMED'
@@ -46,18 +29,16 @@ function loadPlanetsData(){
             }))
             .on('data', async (data) => {
                 if (isHabitablePlanet(data)){
-                    // TODO: Replace below create with insert + update = upset
-                    // await planets.create({
-                    //     keplerName: data.kepler_name,
-                    // });
+                    savePlanet(data);
                 }
             })
             .on('error', (err) => {
                 console.log(err);
                 reject(err);
             })
-            .on('end', () => {                
-                console.log(`${habitablePlanets.length} habitable planets found!`);
+            .on('end', async () => {        
+                const countPlanetsFound = (await getAllPlanets()).length;       
+                console.log(`${countPlanetsFound} habitable planets found!`);
                 resolve();
             });
     });
@@ -67,10 +48,39 @@ async function getAllPlanets () {
     return await planets.find({});
 };
 
+async function savePlanet(data) {
+    try {
+        await planets.updateOne({
+            keplerName: data.kepler_name,
+        }, {
+            keplerName: data.kepler_name,
+        }, {
+            upsert: true,
+        });
+    } catch (err){
+        console.error(`Could not save planet ${err}`);
+    }
+}
+
 module.exports = {
     loadPlanetsData,
     getAllPlanets,
 };
+```  
+
+-   `server/src/routes/planets.controller.js`   
+
+```
+const { getAllPlanets } = require('../../models/planets.model')
+
+async function httpGetAllPlanets(req, res) {
+    // res.status(200).json(planets); 
+    return res.status(200).json(await getAllPlanets());
+};
+
+module.exports = {
+    httpGetAllPlanets,
+}
 ```
 
 -   `server/src/models/planets.mongo.js`
@@ -199,45 +209,16 @@ module.exports = mongoose.model('Launch', launchesSchema);
 
   - under project root run `npm run deploy`
 
-  ```
-> nasa-project@1.0.0 deploy
-> npm run build --prefix client && npm start --prefix server
+<p align="center" >
+    <img src="../imags/170_The-Upsert-Operation.png" width="90%" > 
+</p> 
 
+  -  goto `http://localhost:8000/`
 
-> nasa-fe@1.0.1 build
-> BUILD_PATH=../server/public react-scripts build
+  <p align="center" >
+    <img src="../imags/170_The-Upsert-Operation_2.png" width="90%" > 
+</p> 
 
-Creating an optimized production build...
-Browserslist: caniuse-lite is outdated. Please run:
-  npx browserslist@latest --update-db
-  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
-Compiled successfully.
-
-File sizes after gzip:
-
-  124.67 kB  public/static/js/main.63c96381.js
-
-The project was built assuming it is hosted at /.
-You can control this with the homepage field in your package.json.
-
-The ../server/public folder is ready to be deployed.
-You may serve it with a static server:
-
-  npm install -g serve
-  serve -s ../server/public
-
-Find out more about deployment here:
-
-  https://cra.link/deployment
-
-
-> nasa-project-api@1.0.0 start
-> node src/server.js
-
-MongoDB connection ready!
-0 habitable planets found!
-Listening on port 8000...
-  ```
 
 </details>
 
@@ -250,4 +231,4 @@ Listening on port 8000...
 
 ---
 
-[Previous](./168_Creating-and-Inserting-Documents.md) | [Next](./170_The-Upsert-Operation.md)
+[Previous](./169_Finding-Documents.md) | [Next]()
