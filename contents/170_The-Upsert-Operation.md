@@ -231,4 +231,4 @@ module.exports = mongoose.model('Launch', launchesSchema);
 
 ---
 
-[Previous](./169_Finding-Documents.md) | [Next](./171)
+[Previous](./169_Finding-Documents.md) | [Next](./171_Exploring-Data-Using-Atlas.md)

@@ -1,9 +1,9 @@
-# 175. Saving Launches
+#   176. Listing All Launches
 
 https://github.com/odziem/nasa-project
 
 <details>
-  <summary> 175. Saving Launches </summary>
+  <summary> 176. Listing All Launches </summary>
 
 -   `server/src/models/launches.model.js` 
 
@@ -31,8 +31,9 @@ function existsLaunchWithId(launchId){
     return launches.has(launchId)
 }
 
-function getAllLaunches () {
-    return Array.from(launches.values());
+async function getAllLaunches () {
+    return await launchesDatabase
+        .find({}, { '_id': 0, '__v': 0 });
 }
 
 async function saveLaunch(lauch) {
@@ -68,6 +69,60 @@ module.exports = {
     getAllLaunches,
     addNewLaunch,
     abortLaunchById,
+}
+```
+
+-   `server/src/routes/launches.controller.js`
+```
+const { 
+    getAllLaunches, 
+    addNewLaunch, 
+    existsLaunchWithId,
+    abortLaunchById,
+} = require('../../models/launches.model');
+
+async function httpGetAllLaunches(req, res) {
+    return res.status(200).json(await getAllLaunches());
+}
+
+function httpAddNewLaunch (req, res) {
+    const launch = req.body;
+
+    if (!launch.mission || !launch.rocket || !launch.launchDate
+      || !launch.target) {
+        return res.status(400).json({
+          error: 'Missing required launch property',
+        });
+      }
+  
+    launch.launchDate = new Date(launch.launchDate);
+    if (isNaN(launch.launchDate)) {
+      return res.status(400).json({
+        error: 'Invalid launch date',
+      });
+    }
+
+    addNewLaunch(launch);
+    return res.status(201).json(launch);
+}
+
+function httpAbortLaunch (req, res) {
+  const launchId = Number(req.params.id);
+
+  if (!existsLaunchWithId(launchId)){
+    return res.status(404).json({
+      error: 'Lauch not found',
+    });
+  }
+
+  const aborted = abortLaunchById(launchId);
+  return res.status(200).json(aborted);
+}
+
+module.exports = {
+    httpGetAllLaunches,
+    httpAddNewLaunch,
+    httpAbortLaunch,
 }
 ```
 
@@ -148,6 +203,12 @@ MongoDB connection ready!
 Listening on port 8000...
 ```
 
+-   on postman `GET http://localhost:8000/launches`
+
+<p align="center" >
+    <img src="../imags/176_Listing-All-Launches.png" width="90%" > 
+</p> 
+
 </details>
 
 <details>
@@ -159,4 +220,4 @@ Listening on port 8000...
 
 ---
 
-[Previous](./174_Excluding-Fields-From-The-Response.md) | [Next](./176_Listing-All-Launches.md)
+[Previous](./175_Saving-Launches.md) | [Next]()
