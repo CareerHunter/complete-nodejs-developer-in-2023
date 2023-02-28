@@ -251,7 +251,7 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [165. Reminder: Destination Planets Dropdown](contents/165_Reminder_Destination-Planets-Dropdown.md)    
   -   [166. Creating Models From Schemas](contents/166_Creating-Models-From-Schemas.md)    
   -   [167. Mongoose Models vs MVC Models](contents/167_Mongoose-Models-vs-MVC-Models.md)    
-  -   [168. ](contents)    
+  -   [168. Creating and Inserting Documents](contents/168_Creating-and-Inserting-Documents.md)    
   -   [169. ](contents)    
   -   [170. ](contents)    
 </details>

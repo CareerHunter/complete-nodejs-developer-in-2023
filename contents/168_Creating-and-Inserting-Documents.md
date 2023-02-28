@@ -1,9 +1,62 @@
-# 167. Mongoose Models vs MVC Models
+# 168. Creating and Inserting Documents
 
 https://github.com/odziem/nasa-project
 
 <details>
   <summary> 165. Reminder: Destination Planets Dropdown </summary>
+
+-   `server/src/models/planets.model.js` updating
+
+```
+const  { parse } = require('csv-parse');
+const fs = require('fs');
+const path = require('path');
+
+const planets = require('./planets.mongo');
+
+const habitablePlanets = [];
+
+function isHabitablePlanet(planet) {
+    return planet['koi_disposition'] === 'CONFIRMED'
+        && planet['koi_insol'] > 0.36 && planet['koi_insol'] < 1.11
+        && planet['koi_prad'] < 1.6;
+  }
+  
+function loadPlanetsData(){
+    return new Promise((resolve, reject) => {
+        fs.createReadStream(path.join(__dirname, '..', '..', 'data', 'kepler_data.csv'))
+            .pipe(parse({
+                comment: '#',
+                columns: true
+            }))
+            .on('data', async (data) => {
+                if (isHabitablePlanet(data)){
+                    // TODO: Replace below create with insert + update = upset
+                    // await planets.create({
+                    //     keplerName: data.kepler_name,
+                    // });
+                }
+            })
+            .on('error', (err) => {
+                console.log(err);
+                reject(err);
+            })
+            .on('end', () => {                
+                console.log(`${habitablePlanets.length} habitable planets found!`);
+                resolve();
+            });
+    });
+}
+
+function getAllPlanets () {
+    return habitablePlanets;
+};
+
+module.exports = {
+    loadPlanetsData,
+    getAllPlanets,
+};
+```
 
 -   `server/src/models/planets.mongo.js`
 
@@ -135,4 +188,4 @@ module.exports = mongoose.model('Launch', launchesSchema);
 
 ---
 
-[Previous](./166_Creating-Models-From-Schemas.md) | [Next](./168_Creating-and-Inserting-Documents.md)
+[Previous](./167_Mongoose-Models-vs-MVC-Models.md) | [Next]()
