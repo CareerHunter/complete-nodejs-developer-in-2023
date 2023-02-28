@@ -2,8 +2,6 @@
 
 https://github.com/odziem/nasa-project
 
-
-
 <details>
   <summary> 171. Exploring Data Using Atlas </summary>
 
@@ -22,4 +20,4 @@ https://github.com/odziem/nasa-project
 
 ---
 
-[Previous](./170_The-Upsert-Operation.md) | [Next]()
+[Previous](./170_The-Upsert-Operation.md) | [Next](./172_Updating-Project-Architecture.md)

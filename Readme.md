@@ -255,7 +255,7 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [169. Finding Documents](contents/169_Finding-Documents.md)    
   -   [170. The Upsert Operation](contents/170_The-Upsert-Operation.md)    
   -   [171. Exploring Data Using Atlas](contents/171_Exploring-Data-Using-Atlas.md)    
-  -   [172. ](contents)    
+  -   [172. Updating Project Architecture](contents/172_Updating-Project-Architecture.md)    
   -   [173. ](contents)    
   -   [174. ](contents)    
   -   [175. ](contents)    
