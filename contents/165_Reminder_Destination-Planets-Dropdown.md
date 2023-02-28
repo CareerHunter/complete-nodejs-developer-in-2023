@@ -146,4 +146,4 @@ module.exports = mongoose.model('Launch', launchesSchema);
 
 ---
 
-[Previous](./163_Creating-Mongoose-Schema-for-Launches.md) | [Next](./165_Reminder_Destination-Planets-Dropdown.md)
+[Previous](./163_Creating-Mongoose-Schema-for-Launches.md) | [Next](./166_Creating-Models-From-Schemas.md)

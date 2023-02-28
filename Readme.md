@@ -252,8 +252,13 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [166. Creating Models From Schemas](contents/166_Creating-Models-From-Schemas.md)    
   -   [167. Mongoose Models vs MVC Models](contents/167_Mongoose-Models-vs-MVC-Models.md)    
   -   [168. Creating and Inserting Documents](contents/168_Creating-and-Inserting-Documents.md)    
-  -   [169. ](contents)    
+  -   [169. Finding Documents](contents/169_Finding-Documents.md)    
   -   [170. ](contents)    
+  -   [171. ](contents)    
+  -   [172. ](contents)    
+  -   [173. ](contents)    
+  -   [174. ](contents)    
+  -   [175. ](contents)    
 </details>
 
 <details>

@@ -1,9 +1,24 @@
-# 168. Creating and Inserting Documents
+# 169. Finding Documents
 
 https://github.com/odziem/nasa-project
 
 <details>
-  <summary> 168. Creating and Inserting Documents </summary>
+  <summary> 169. Finding Documents </summary>
+
+-   `server/src/routes/planets.controller.js`   updating
+
+```
+const { getAllPlanets } = require('../../models/planets.model')
+
+async function httpGetAllPlanets(req, res) {
+    // res.status(200).json(planets); 
+    return res.status(200).json(await getAllPlanets());
+};
+
+module.exports = {
+    httpGetAllPlanets,
+}
+```
 
 -   `server/src/models/planets.model.js` updating
 
@@ -48,8 +63,8 @@ function loadPlanetsData(){
     });
 }
 
-function getAllPlanets () {
-    return habitablePlanets;
+async function getAllPlanets () {
+    return await planets.find({});
 };
 
 module.exports = {
@@ -180,6 +195,53 @@ module.exports = mongoose.model('Launch', launchesSchema);
 </details>
 
 <details>
+  <summary> run deploy result </summary>
+
+  - under project root run `npm run deploy`
+
+  ```
+> nasa-project@1.0.0 deploy
+> npm run build --prefix client && npm start --prefix server
+
+
+> nasa-fe@1.0.1 build
+> BUILD_PATH=../server/public react-scripts build
+
+Creating an optimized production build...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+Compiled successfully.
+
+File sizes after gzip:
+
+  124.67 kB  public/static/js/main.63c96381.js
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The ../server/public folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s ../server/public
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+
+
+> nasa-project-api@1.0.0 start
+> node src/server.js
+
+MongoDB connection ready!
+0 habitable planets found!
+Listening on port 8000...
+  ```
+
+</details>
+
+<details>
   <summary> Section 12: Databases </summary>
 
   - [Codebase: s12_nasa-project-pm2](../src/s12_nasa-project-pm2/)
@@ -188,4 +250,4 @@ module.exports = mongoose.model('Launch', launchesSchema);
 
 ---
 
-[Previous](./167_Mongoose-Models-vs-MVC-Models.md) | [Next](./169_Finding-Documents.md)
+[Previous](./168_Creating-and-Inserting-Documents.md) | [Next]()
