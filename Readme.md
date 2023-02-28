@@ -254,7 +254,7 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [168. Creating and Inserting Documents](contents/168_Creating-and-Inserting-Documents.md)    
   -   [169. Finding Documents](contents/169_Finding-Documents.md)    
   -   [170. The Upsert Operation](contents/170_The-Upsert-Operation.md)    
-  -   [171. ](contents)    
+  -   [171. Exploring Data Using Atlas](contents/171_Exploring-Data-Using-Atlas.md)    
   -   [172. ](contents)    
   -   [173. ](contents)    
   -   [174. ](contents)    

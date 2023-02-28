@@ -209,9 +209,9 @@ module.exports = mongoose.model('Launch', launchesSchema);
 
   - under project root run `npm run deploy`
 
-<p align="center" >
+  <p align="center" >
     <img src="../imags/170_The-Upsert-Operation.png" width="90%" > 
-</p> 
+  </p> 
 
   -  goto `http://localhost:8000/`
 
@@ -231,4 +231,4 @@ module.exports = mongoose.model('Launch', launchesSchema);
 
 ---
 
-[Previous](./169_Finding-Documents.md) | [Next]()
+[Previous](./169_Finding-Documents.md) | [Next](./171)
