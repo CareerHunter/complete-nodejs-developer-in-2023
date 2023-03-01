@@ -1,3 +1,15 @@
+# 179. Getting Latest Flight Number
+
+
+
+https://github.com/odziem/nasa-project
+
+<details>
+  <summary>  179. Getting Latest Flight Number </summary>
+
+-   `server/src/models/launches.model.js` 
+
+```
 const launchesDatabase = require('./launches.mongo');
 const planets = require('./planets.mongo');
 
@@ -81,3 +93,18 @@ module.exports = {
     addNewLaunch,
     abortLaunchById,
 }
+
+```
+
+</details>
+
+<details>
+  <summary> Section 12: Databases </summary>
+
+  - [Codebase: s12_nasa-project-pm2](../src/s12_nasa-project-pm2/)
+
+</details>
+
+---
+
+[Previous](./178_Auto-Increment-In-MongoDB.md) | [Next]()
