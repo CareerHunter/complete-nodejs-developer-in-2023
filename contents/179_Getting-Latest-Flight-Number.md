@@ -1,31 +1,28 @@
-# 177. Referential Integrity
+# 179. Getting Latest Flight Number
 
--   [Referential Integrity](https://en.wikipedia.org/wiki/Referential_integrity)
-
--   [Node.js Best Practices Repo](https://github.com/goldbergyoni/nodebestpractices)
 
 
 https://github.com/odziem/nasa-project
 
 <details>
-  <summary> 177. Referential Integrity </summary>
+  <summary>  179. Getting Latest Flight Number </summary>
 
--   `server/src/models/launches.model.js`  
+-   `server/src/models/launches.model.js` 
 
 ```
 const launchesDatabase = require('./launches.mongo');
 const planets = require('./planets.mongo');
 
-const launches = new Map();
+const DEFAULT_FLIGHT_NUMBER = 100;
 
-let latestFlightNumber = 100;
+const launches = new Map();
 
 const launch = {
     flightNumber: 100,
     mission: 'Kepler Exploration X',
     rocket: 'Explorer IS1',
     launchDate: new Date('December 27, 2030'),
-    target: 'Adams Home Planet',
+    target: 'Kepler-442 b',
     customer: ['ZTM', 'NASA'],
     upcoming: true,
     success: true
@@ -35,6 +32,18 @@ saveLaunch(launch);
 
 function existsLaunchWithId(launchId){
     return launches.has(launchId)
+}
+
+async function getLatestFlightNumber(){
+    const latestLaunch = await launchesDatabase
+        .findOne()
+        .sort('-flightNumber');
+
+    if (!latestLaunch){
+        return DEFAULT_FLIGHT_NUMBER;
+    }
+
+    return latestLaunch.flightNumber;
 }
 
 async function getAllLaunches () {
@@ -84,25 +93,8 @@ module.exports = {
     addNewLaunch,
     abortLaunchById,
 }
+
 ```
-
--   `server/src/routes/launches.controller.js` same 176
-
--   `server/src/models/planets.model.js` same as updating in  174
-
-</details>
-
-<details>
-  <summary> result - capture </summary>
-
-- in `server/src/models/launches.model.js`  change `target: 'Kepler-442 b',` to `target: 'Adams Home Planet',`
-
-- run `npm run deploy` to see the result
-
-<p align="center" >
-    <img src="../imags/177_Referential-Integrity.png" width="45%" > 
-    <img src="../imags/177_Referential-Integrity_2.png" width="45%" > 
-</p> 
 
 </details>
 
@@ -115,5 +107,4 @@ module.exports = {
 
 ---
 
-[Previous](./176_Listing-All-Launches.md) | [Next](./178_Auto-Increment-In-MongoDB.md)
-
+[Previous](./178_Auto-Increment-In-MongoDB.md) | [Next](./180_Scheduling-New-Launches.md)
