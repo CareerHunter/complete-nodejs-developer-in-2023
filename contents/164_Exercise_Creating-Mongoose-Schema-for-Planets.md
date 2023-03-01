@@ -1,3 +1,27 @@
+# 164. Exercise: Creating Mongoose Schema for Planets
+
+
+<details>
+  <summary> 164. Exercise: Creating Mongoose Schema for Planets </summary>
+
+
+-   `server/src/models/planets.mongo.js`
+
+```
+const mongoose = require('mongoose');
+
+const planetSchema = new mongoose.Schema({
+    keplerName: {
+        type: String,
+        required: true,
+    } 
+});
+```
+
+**Note:** update `client/src/pages/launch.js` to change the name `kepler_name` to `keplerName`  
+
+-   `client/src/pages/launch.js`
+```
 import { useMemo } from "react";
 import { Appear, Button, Loading, Paragraph } from "arwes";
 import Clickable from "../components/Clickable";
@@ -52,3 +76,57 @@ const Launch = (props) => {
 };
 
 export default Launch;
+```
+
+**from 163. Creating Mongoose Schema for Launches**
+-   `server/src/models/launches.mongo.js`
+
+```
+const mongoose = require('mongoose');
+
+const launchesSchema = new mongoose.Schema({
+    flightNumber: {
+        type: Number,
+        required: true,        
+    },
+    launcheDate: {
+        type: Date,
+        required: true,
+    },
+    mission: {
+        type: String,
+        required: true,
+    },
+    rocket: {
+        type: String,
+        required: true,
+    },
+    target: {
+        type: String,
+        required: true,
+    },  
+    customers: [ String ],
+    upcoming: {
+        type: Boolean,
+        required: true,
+    },  
+    success: {
+        type: Boolean,
+        required: true,
+        default: true
+    },  
+})
+```
+
+</details>
+
+<details>
+  <summary> Section 12: Databases </summary>
+
+  - [Codebase: s12_nasa-project-pm2](../src/s12_nasa-project-pm2/)
+
+</details>
+
+---
+
+[Previous](./163_Creating-Mongoose-Schema-for-Launches.md) | [Next](./165_Reminder_Destination-Planets-Dropdown.md)

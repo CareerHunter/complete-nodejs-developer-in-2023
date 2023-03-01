@@ -1,3 +1,30 @@
+# 166. Creating Models From Schemas
+
+https://github.com/odziem/nasa-project
+
+<details>
+  <summary> 165. Reminder: Destination Planets Dropdown </summary>
+
+-   `server/src/models/planets.mongo.js`
+
+```
+const mongoose = require('mongoose');
+
+const planetSchema = new mongoose.Schema({
+    keplerName: {
+        type: String,
+        required: true,
+    } 
+});
+
+// Connects planetSchema with the "planets" collection
+module.exports = mongoose.model('Planet', planetSchema);
+```
+
+**Note:** update `client/src/pages/launch.js` to change the name `kepler_name` to `keplerName`  
+
+-   `client/src/pages/launch.js`
+```
 import { useMemo } from "react";
 import { Appear, Button, Loading, Paragraph } from "arwes";
 import Clickable from "../components/Clickable";
@@ -52,3 +79,60 @@ const Launch = (props) => {
 };
 
 export default Launch;
+```
+
+**from 163. Creating Mongoose Schema for Launches**
+-   `server/src/models/launches.mongo.js`
+
+```
+const mongoose = require('mongoose');
+
+const launchesSchema = new mongoose.Schema({
+    flightNumber: {
+        type: Number,
+        required: true,        
+    },
+    launcheDate: {
+        type: Date,
+        required: true,
+    },
+    mission: {
+        type: String,
+        required: true,
+    },
+    rocket: {
+        type: String,
+        required: true,
+    },
+    target: {
+        type: String,
+        required: true,
+    },  
+    customers: [ String ],
+    upcoming: {
+        type: Boolean,
+        required: true,
+    },  
+    success: {
+        type: Boolean,
+        required: true,
+        default: true
+    },  
+});
+
+// Connects launchesSchema with the "launches" collection
+module.exports = mongoose.model('Launch', launchesSchema);
+```
+
+</details>
+
+<details>
+  <summary> Section 12: Databases </summary>
+
+  - [Codebase: s12_nasa-project-pm2](../src/s12_nasa-project-pm2/)
+
+</details>
+
+---
+
+[Previous](./165_Reminder_Destination-Planets-Dropdown.md) | [Next](./167_Mongoose-Models-vs-MVC-Models.md)

@@ -49,17 +49,6 @@
 
   - install csv-parse `npm i csv-parse`
 
-<details>
-  <summary> Capture - FrontEnd Setup </summary>  
-
-  <p align="center" >
-    <img src="../imags/103_NASA-Dashboard-Front-End-Setup.png" width="30%" >
-    <img src="../imags/103_NASA-Dashboard-Front-End-Setup_2.png" width="30%" >
-    <img src="../imags/103_NASA-Dashboard-Front-End-Setup_3.png" width="30%" >
-</p> 
-
-</details>
-
 ## NASA API Server Setup 
 
 **under server folder**
@@ -80,27 +69,10 @@
 
   - add script `"cluster": "pm2 start src/server.js -i max"` on package.json
 
-<details>
-  <summary> Capture - Server Setup </summary>
-
--   run `npm run watch` 
-
--  `http://localhost:3000/`
-
-<p align="center" >
-    <img src="../../../imags/100_Layouts-and-Separation-of-Concerns.png" width="90%" >
-    <img src="../../../imags/100_Layouts-and-Separation-of-Concerns_2.png" width="90%" >
-</p> 
-
-- install mongoose `npm install mongoose`
+  - install mongoose `npm install mongoose`
 
 ## NASA API Test
 
 - install jest `npm install jest --save-dev`
 
 - install supertest `npm install supertest --save-dev`
-
-
-
-</details>
-
