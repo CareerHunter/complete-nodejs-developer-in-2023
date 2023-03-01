@@ -264,7 +264,7 @@ Learn from real NodeJS experts! Includes REALLY Advanced NodeJS. Express, GraphQ
   -   [178. Auto Increment In MongoDB](contents/178_Auto-Increment-In-MongoDB.md)    
   -   [179. Getting Latest Flight Number](contents/179_Getting-Latest-Flight-Number.md)    
   -   [180. Scheduling New Launches](contents/180_Scheduling-New-Launches.md)    
-  -   [181. ](contents)    
+  -   [181. Investigating A Mongoose Mystery](contents/181_Investigating-A-Mongoose-Mystery.md)    
   -   [182. ](contents)    
   -   [183. ](contents)    
   -   [184. ](contents)    

@@ -1,4 +1,4 @@
-# 180. Scheduling New Launches
+# 181. Investigating A Mongoose Mystery
 
 https://github.com/odziem/nasa-project
 
@@ -191,4 +191,4 @@ Listening on port 8000...
 
 ---
 
-[Previous](./179_Getting-Latest-Flight-Number.md) | [Next](./181_Investigating-A-Mongoose-Mystery.md)
+[Previous](./180_Scheduling-New-Launches.md) | [Next]()
