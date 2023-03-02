@@ -1,5 +1,7 @@
 # 181. Investigating A Mongoose Mystery
 
+- [$setOnInsert](https://www.mongodb.com/docs/manual/reference/operator/update/setOnInsert/)
+
 https://github.com/odziem/nasa-project
 
 <details>
@@ -49,21 +51,13 @@ async function getAllLaunches () {
         .find({}, { '_id': 0, '__v': 0 });
 }
 
-async function saveLaunch(lauch) {
-    const planet = await planets.findOne({
-        keplerName: launch.target
-    });
-
-    if (!planet) {
-        throw new Error('No Matching planet found');
-    }
-
+async function saveLaunch(launch) {
     await launchesDatabase.updateOne({
-        flightNumber: lauch.flightNumber,
+      flightNumber: launch.flightNumber,
     }, launch, {
-        upsert: true,        
-    })
-}
+      upsert: true,
+    });
+  }
 
 async function scheduleNewLaunch(launch) {
     const newFlightNumber = await getLatestFlightNumber() + 1;
@@ -75,7 +69,7 @@ async function scheduleNewLaunch(launch) {
         flightNumber: newFlightNumber,
     });
 
-    await saveLaunch(newL);
+    await saveLaunch(newLaunch);
 }
 
 function abortLaunchById (launchId) {
@@ -125,6 +119,7 @@ async function httpAddNewLaunch (req, res) {
     }
 
     await scheduleNewLaunch(launch);
+    console.log(launch);
     return res.status(201).json(launch);
 }
 
@@ -150,7 +145,21 @@ module.exports = {
 </details>
 
 <details>
-  <summary> result - capture </summary>
+  <summary> .updateOne() vs $setOnInsert - capture </summary>
+
+- `server/src/models/launches.model.js` notice `.updateOne()` vs `$setOnInsert`
+
+```
+//...
+async function saveLaunch(launch) {
+    await launchesDatabase.updateOne({
+      flightNumber: launch.flightNumber,
+    }, launch, {
+      upsert: true,
+    });
+  }
+//...
+```
 
 - run `npm run deploy` to see the result
 
@@ -162,6 +171,18 @@ module.exports = {
 MongoDB connection ready!
 8 habitable planets found!
 Listening on port 8000...
+{
+  mission: 'Down and Away',
+  rocket: 'ZTM Starship',
+  target: 'Kepler-62 f',
+  launchDate: 2028-07-01T07:00:00.000Z,
+  success: true,
+  upcoming: true,
+  customer: [ 'Zero to Mastery', 'NASA' ],
+  flightNumber: 103,
+  '$setOnInsert': { __v: 0 }
+}
+::1 - - [02/Mar/2023:13:53:07 +0000] "POST /launches HTTP/1.1" 201 227 "-" "PostmanRuntime/7.31.1"
 ```
 
 -   on postman `POST localhost:8000/launches`
@@ -176,8 +197,72 @@ Listening on port 8000...
 ```
 
 <p align="center" >
-    <img src="../imags/180_Scheduling-New-Launches.png" width="45%" > 
-    <img src="../imags/180_Scheduling-New-Launches_2.png" width="45%" > 
+    <img src="../imags/181_Investigating-A-Mongoose-Mystery.png" width="45%" > 
+    <img src="../imags/181_Investigating-A-Mongoose-Mystery_2.png" width="45%" > 
+</p> 
+
+</details>
+<details>
+  <summary> .findOneAndUpdate() vs $setOnInsert - capture </summary>
+
+- `server/src/models/launches.model.js` notice `.updateOne()` vs `$setOnInsert`
+
+```
+//...
+async function saveLaunch(launch) {
+    await launchesDatabase.findOneAndUpdate({
+      flightNumber: launch.flightNumber,
+    }, launch, {
+      upsert: true,
+    });
+  }
+//...
+```
+
+- run `npm run deploy` to see the result
+
+```
+...
+> nasa-project-api@1.0.0 start
+> node src/server.js
+
+MongoDB connection ready!
+8 habitable planets found!
+Listening on port 8000...
+{
+  mission: 'ZTM160',
+  rocket: 'ZTM Starship',
+  target: 'Kepler-62 f',
+  launchDate: 2028-07-01T07:00:00.000Z,
+  success: true,
+  upcoming: true,
+  customer: [ 'Zero to Mastery', 'NASA' ],
+  flightNumber: 101
+}
+::1 - - [02/Mar/2023:13:53:07 +0000] "POST /launches HTTP/1.1" 201 227 "-" "PostmanRuntime/7.31.1"
+```
+
+-   on postman `POST localhost:8000/launches`
+```
+{
+    "mission": "ZTM160",
+    "rocket": "ZTM Starship",
+    "target": "Kepler-62 f",
+    "launchDate": "July 1, 2028"
+
+}
+```
+
+<p align="center" >
+    <img src="../imags/181_Investigating-A-Mongoose-Mystery_3.png" width="45%" > 
+    <img src="../imags/181_Investigating-A-Mongoose-Mystery_4.png" width="45%" > 
+</p> 
+
+- goto `http://localhost:8000/`
+
+<p align="center" >
+    <img src="../imags/181_Investigating-A-Mongoose-Mystery_5.png" width="45%" > 
+    <img src="../imags/181_Investigating-A-Mongoose-Mystery_6.png" width="45%" > 
 </p> 
 
 </details>

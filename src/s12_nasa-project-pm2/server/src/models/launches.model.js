@@ -39,21 +39,13 @@ async function getAllLaunches () {
         .find({}, { '_id': 0, '__v': 0 });
 }
 
-async function saveLaunch(lauch) {
-    const planet = await planets.findOne({
-        keplerName: launch.target
-    });
-
-    if (!planet) {
-        throw new Error('No Matching planet found');
-    }
-
-    await launchesDatabase.updateOne({
-        flightNumber: lauch.flightNumber,
+async function saveLaunch(launch) {
+    await launchesDatabase.findOneAndUpdate({
+      flightNumber: launch.flightNumber,
     }, launch, {
-        upsert: true,        
-    })
-}
+      upsert: true,
+    });
+  }
 
 async function scheduleNewLaunch(launch) {
     const newFlightNumber = await getLatestFlightNumber() + 1;
@@ -65,7 +57,7 @@ async function scheduleNewLaunch(launch) {
         flightNumber: newFlightNumber,
     });
 
-    await saveLaunch(newFlightNumber);
+    await saveLaunch(newLaunch);
 }
 
 function abortLaunchById (launchId) {

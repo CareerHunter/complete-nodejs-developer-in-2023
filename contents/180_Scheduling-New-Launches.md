@@ -176,8 +176,8 @@ Listening on port 8000...
 ```
 
 <p align="center" >
-    <img src="../imags/180_Scheduling-New-Launches.png" width="45%" > 
-    <img src="../imags/180_Scheduling-New-Launches_2.png" width="45%" > 
+    <img src="../imags/180_Scheduling-New-Launches.png" width="90%" > 
+    <img src="../imags/180_Scheduling-New-Launches_2.png" width="90%" > 
 </p> 
 
 </details>
